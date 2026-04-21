@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="nl" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO META TAGS ===== -->
+<title>Lening Simulator België – Hypotheek Berekenen 2025 | Gratis Online Tool</title>
+<meta name="description" content="Bereken gratis uw hypothecaire lening of woonlening. Voer uw aankoopprijs, eigen vermogen en rentevoet in en ontvang direct een volledige aflossingstabel, maandlast en totale interestkosten. De beste lening simulator voor België.">
+<meta name="keywords" content="lening simulator, hypotheek berekenen, woonlening berekenen, hypothecaire lening simulator, maandlast berekenen, lening calculator België, hypotheek calculator, aflossingstabel, rentevoet berekenen, eigen woning lening">
+<meta name="author" content="LeningSimulator.be">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://leningsimulator.be/">
+<meta name="geo.region" content="BE">
+<meta name="geo.country" content="Belgium">
+<meta name="language" content="nl-BE">
+
+<!-- ===== OPEN GRAPH (Facebook/LinkedIn) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lening Simulator België – Hypotheek Gratis Berekenen">
+<meta property="og:description" content="De meest complete lening simulator voor België. Bereken uw maandlast, totale interestkosten en aflossingstabel in seconden. Gratis en zonder registratie.">
+<meta property="og:url" content="https://leningsimulator.be/">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="LeningSimulator.be">
+
+<!-- ===== TWITTER CARD ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lening Simulator België – Hypotheek Gratis Berekenen">
+<meta name="twitter:description" content="Bereken uw woonlening gratis online. Maandlast, totale interest, aflossingstabel en scenario-vergelijking in één overzicht.">
+
+<!-- ===== STRUCTURED DATA (Schema.org – helpt Google begrijpen wat de pagina doet) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://leningsimulator.be/#website",
+      "url": "https://leningsimulator.be/",
+      "name": "LeningSimulator.be",
+      "description": "Gratis online lening simulator en hypotheek calculator voor België",
+      "inLanguage": "nl-BE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://leningsimulator.be/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://leningsimulator.be/#app",
+      "name": "Lening Simulator – Hypotheek Berekenen",
+      "url": "https://leningsimulator.be/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "Bereken uw hypothecaire lening of woonlening. Voer aankoopprijs, eigen vermogen, looptijd en rentevoet in voor een volledige simulatie.",
+      "featureList": [
+        "Maandlast berekenen",
+        "Aflossingstabel per maand en jaar",
+        "Vergelijking vaste vs variabele rentevoet",
+        "Scenario-simulatie",
+        "Export naar PDF",
+        "Gratis en zonder registratie"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hoeveel kan ik lenen voor een woning in België?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In België hanteren de meeste banken een maximale schuldgraad van 33% van uw netto-inkomen. Op basis van uw maandinkomen berekent onze simulator automatisch hoeveel u maximaal kunt lenen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wat is het verschil tussen vaste en variabele rentevoet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bij een vaste rentevoet blijft uw maandlast gedurende de hele looptijd gelijk. Bij een variabele rentevoet kan de rente elke 1, 3 of 5 jaar herzien worden op basis van de marktindex."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welke bijkomende kosten zijn er bij een woonlening?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Naast het leenbedrag zijn er notariskosten, registratierechten (12,5% of 3% bij abattement), dossierkosten van de bank en eventuele renovatiekosten. Onze simulator houdt rekening met al deze kosten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe berekent de simulator mijn maandlast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De maandlast wordt berekend via de annuïteitsformule: M = P × [r(1+r)ⁿ] / [(1+r)ⁿ-1], waarbij P het leenbedrag is, r de maandelijkse rentevoet en n het totale aantal maanden."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ===== GOOGLE FONTS ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ===== CHART.JS ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f3ee;
+  --card:#ffffff;
+  --border:#e2ddd5;
+  --text:#1c1a17;
+  --muted:#6b6558;
+  --accent:#1a4f8a;
+  --accent-light:#e8f0fb;
+  --accent2:#c0622a;
+  --green:#1e6b3c;
+  --warn:#b45309;
+  --radius:14px;
+  --font-head:'Fraunces',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+}
+
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.65}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ====== LAYOUT ====== */
+.site-wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ====== HEADER / NAV ====== */
+.site-header{background:var(--accent);color:#fff;padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--font-head);font-size:22px;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
+.logo-icon{width:34px;height:34px;background:rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.nav-links{display:flex;gap:24px;font-size:14px;font-weight:500}
+.nav-links a{color:rgba(255,255,255,.85)}
+.nav-links a:hover{color:#fff;text-decoration:none}
+
+/* ====== HERO ====== */
+.hero{background:var(--accent);color:#fff;padding:64px 0 80px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero h1{font-family:var(--font-head);font-size:46px;font-weight:700;line-height:1.15;margin-bottom:20px}
+.hero h1 em{color:#f0c060;font-style:normal}
+.hero p{font-size:17px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:28px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px}
+.hero-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:500}
+.hero-stats{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);padding:28px}
+.hero-stat{text-align:center;padding:16px}
+.hero-stat .num{font-family:var(--font-head);font-size:36px;font-weight:700;color:#f0c060}
+.hero-stat .lbl{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px}
+.hero-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.15);border-left:1px solid rgba(255,255,255,.15)}
+.hero-stat{border-right:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15)}
+
+/* ====== TRUST BAR ====== */
+.trust-bar{background:var(--card);border-bottom:1px solid var(--border);padding:18px 0}
+.trust-inner{display:flex;gap:32px;align-items:center;justify-content:center;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);font-weight:500}
+.trust-icon{font-size:18px}
+
+/* ====== MAIN APP AREA ====== */
+.app-section{padding:48px 0}
+.section-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px}
+.section-title{font-family:var(--font-head);font-size:32px;font-weight:700;margin-bottom:8px}
+.section-sub{color:var(--muted);font-size:15px;margin-bottom:32px}
+
+/* ====== CARDS ====== */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.card-accent-top{border-top:3px solid var(--accent)}
+.card-title{font-family:var(--font-head);font-size:18px;font-weight:600;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.card-title-icon{width:32px;height:32px;border-radius:8px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+
+/* ====== FORM ELEMENTS ====== */
+.field{margin-bottom:18px}
+label.field-label{font-size:13px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px;font-family:var(--font-body)}
+input[type=number],select{
+  width:100%;border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;
+  font-size:14px;font-family:var(--font-body);background:var(--bg);color:var(--text);
+  outline:none;transition:border .2s,box-shadow .2s
+}
+input[type=number]:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,79,138,.12)}
+input[type=range]{width:100%;accent-color:var(--accent);margin:6px 0 2px;cursor:pointer}
+.slider-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.slider-val{font-size:14px;font-weight:600;color:var(--accent);min-width:90px;text-align:right;font-family:var(--font-body)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ====== GRID ====== */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+/* ====== METRIC CARDS ====== */
+.metric{background:var(--bg);border-radius:10px;padding:16px 18px;border:1px solid var(--border)}
+.metric .m-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:6px}
+.metric .m-value{font-family:var(--font-head);font-size:24px;font-weight:700;color:var(--accent);line-height:1.1}
+.metric .m-sub{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* ====== SUMMARY HERO BOX ====== */
+.result-hero{background:var(--accent);color:#fff;border-radius:var(--radius);padding:32px;margin-bottom:32px}
+.result-hero h2{font-family:var(--font-head);font-size:22px;font-weight:700;color:#fff;margin-bottom:20px}
+.result-hero .metric{background:rgba(255,255,255,.12);border:none}
+.result-hero .metric .m-label{color:rgba(255,255,255,.7)}
+.result-hero .metric .m-value{color:#fff;font-size:20px}
+.result-hero .metric .m-sub{color:rgba(255,255,255,.6)}
+
+/* ====== ALERTS ====== */
+.alert{border-radius:10px;padding:14px 18px;font-size:14px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start;font-family:var(--font-body)}
+.alert-warn{background:#fffbf0;border:1px solid #f0d080;color:#7a4a00}
+.alert-ok{background:#f0fff5;border:1px solid #80d4a0;color:#1a5030}
+.alert-danger{background:#fff5f5;border:1px solid #f0a0a0;color:#7a1a1a}
+.alert-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+
+/* ====== TABS ====== */
+.tab-nav{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:28px;overflow-x:auto}
+.tab-btn{padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer;border:none;background:none;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;font-family:var(--font-body)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-btn:hover{color:var(--text)}
+
+/* ====== TABLE ====== */
+.table-scroll{max-height:420px;overflow-y:auto;border:1px solid var(--border);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:13px;font-family:var(--font-body)}
+th{background:var(--bg);padding:11px 14px;text-align:right;font-weight:600;font-size:12px;color:var(--muted);border-bottom:2px solid var(--border);position:sticky;top:0}
+th:first-child{text-align:left}
+td{padding:9px 14px;text-align:right;border-bottom:1px solid var(--border)}
+td:first-child{text-align:left;font-weight:500}
+tr:hover td{background:#faf9f7}
+.td-warn{color:var(--warn)!important}
+
+/* ====== COMPARE ====== */
+.compare-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:20px;align-items:start}
+.compare-vs{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:var(--muted);padding-top:60px}
+
+/* ====== BUTTON ====== */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-body);border:none;transition:all .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#163d70;transform:translateY(-1px)}
+.btn-secondary{background:var(--bg);color:var(--accent);border:1.5px solid var(--accent)}
+.btn-secondary:hover{background:var(--accent-light)}
+.btn-full{width:100%;justify-content:center;font-size:16px;padding:16px}
+
+/* ====== TOGGLE VIEW ====== */
+.toggle-group{display:flex;border:1.5px solid var(--border);border-radius:9px;overflow:hidden}
+.toggle-btn{flex:1;padding:9px 16px;font-size:13px;font-weight:600;cursor:pointer;border:none;background:var(--bg);color:var(--muted);font-family:var(--font-body)}
+.toggle-btn.active{background:var(--accent);color:#fff}
+
+/* ====== TIPS ====== */
+.tip-card{background:var(--accent-light);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;margin-bottom:12px;color:var(--text)}
+.tip-card strong{color:var(--accent)}
+
+/* ====== PROGRESS ====== */
+.prog-bar{height:10px;background:var(--border);border-radius:5px;overflow:hidden;margin-top:8px}
+.prog-fill{height:100%;border-radius:5px;background:var(--accent);transition:width .6s ease}
+
+/* ====== FAQ SECTION ====== */
+.faq-section{background:var(--card);border-top:1px solid var(--border);padding:64px 0}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.faq-item h3{font-family:var(--font-head);font-size:17px;font-weight:600;margin-bottom:8px;color:var(--text)}
+.faq-item p{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ====== FOOTER ====== */
+.site-footer{background:var(--text);color:rgba(255,255,255,.7);padding:48px 0 28px;margin-top:0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand{font-family:var(--font-head);font-size:20px;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-desc{font-size:14px;line-height:1.7}
+.footer-col h4{font-size:13px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{color:rgba(255,255,255,.65);font-size:14px}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:gap}
+.footer-disclaimer{font-size:12px;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.6}
+
+/* ====== COOKIE BANNER ====== */
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#1c1a17;color:#fff;padding:18px 24px;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;font-family:var(--font-body)}
+#cookie-banner p{color:rgba(255,255,255,.8);max-width:600px;font-size:13px}
+.cookie-btns{display:flex;gap:10px;flex-shrink:0}
+.cookie-btn{padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:var(--font-body)}
+.cookie-accept{background:var(--accent);color:#fff}
+.cookie-decline{background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3)}
+
+/* ====== ADSENSE PLACEHOLDER ====== */
+.ad-slot{background:var(--bg);border:2px dashed var(--border);border-radius:10px;padding:24px;text-align:center;color:var(--muted);font-size:13px;margin:24px 0}
+.ad-slot-label{font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;opacity:.6}
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:768px){
+  .g2,.g3,.g4,.hero-inner,.compare-grid,.faq-grid,.footer-grid{grid-template-columns:1fr}
+  .field-row{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .hero{padding:40px 0 64px}
+  .compare-vs{padding-top:0;font-size:16px}
+  .nav-links{display:none}
+  .hero-stats-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .g4{grid-template-columns:1fr 1fr}
+  .tab-btn{padding:10px 14px;font-size:13px}
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .5s ease forwards}
+.delay-1{animation-delay:.1s}
+.delay-2{animation-delay:.2s}
+.delay-3{animation-delay:.3s}
+
+/* ====== PRINT ====== */
+@media print{
+  .site-header,.trust-bar,.hero,.faq-section,.site-footer,#cookie-banner,.ad-slot,.btn,.tab-nav{display:none!important}
+  .card{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
+  body{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ====== COOKIE BANNER (GDPR) ====== -->
+<div id="cookie-banner">
+  <p>Wij gebruiken cookies om uw ervaring te verbeteren en anonieme statistieken bij te houden. Lees onze <a href="#" style="color:#f0c060">cookiepolicy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-decline" onclick="hideCookie()">Enkel noodzakelijke</button>
+    <button class="cookie-btn cookie-accept" onclick="acceptCookie()">Alles accepteren</button>
+  </div>
+</div>
+
+<!-- ====== HEADER ====== -->
+<header class="site-header" role="banner">
+  <div class="site-wrap">
+    <nav class="nav-inner" aria-label="Hoofdnavigatie">
+      <div class="logo">
+        <div class="logo-icon">🏠</div>
+        LeningSimulator.be
+      </div>
+      <div class="nav-links">
+        <a href="#simulator">Simulator</a>
+        <a href="#hoe-werkt-het">Hoe werkt het?</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="site-wrap">
+    <div class="hero-inner">
+      <div class="fade-up">
+        <h1 id="hero-title">De beste <em>lening simulator</em> voor uw woning</h1>
+        <p>Bereken in seconden hoeveel u kunt lenen, wat uw maandlast is en wat u totaal betaalt. Gratis, zonder registratie, volledig voor België.</p>
+        <div class="hero-badges">
+          <span class="hero-badge">✓ Gratis &amp; anoniem</span>
+          <span class="hero-badge">✓ Vaste &amp; variabele rente</span>
+          <span class="hero-badge">✓ Aflossingstabel</span>
+          <span class="hero-badge">✓ PDF-export</span>
+          <span class="hero-badge">✓ Bijgewerkt 2025</span>
+        </div>
+      </div>
+      <div class="hero-stats fade-up delay-2">
+        <p style="font-size:13px;color:rgba(255,255,255,.65);margin-bottom:16px;font-weight:500">WAT DEZE TOOL BEREKENT</p>
+        <div class="hero-stats-grid">
+          <div class="hero-stat"><div class="num">≤33%</div><div class="lbl">Max. schuldgraad</div></div>
+          <div class="hero-stat"><div class="num">30j</div><div class="lbl">Max. looptijd</div></div>
+          <div class="hero-stat"><div class="num">2</div><div class="lbl">Rentetypes</div></div>
+          <div class="hero-stat"><div class="num">∞</div><div class="lbl">Scenario's</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST BAR ====== -->
+<div class="trust-bar" role="complementary" aria-label="Kenmerken">
+  <div class="site-wrap">
+    <div class="trust-inner">
+      <div class="trust-item"><span class="trust-icon">🔒</span> Geen persoonlijke data opgeslagen</div>
+      <div class="trust-item"><span class="trust-icon">⚡</span> Realtime berekening</div>
+      <div class="trust-item"><span class="trust-icon">🇧🇪</span> Afgestemd op Belgische wetgeving</div>
+      <div class="trust-item"><span class="trust-icon">📱</span> Werkt op smartphone</div>
+      <div class="trust-item"><span class="trust-icon">🆓</span> Volledig gratis</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== AD SLOT TOP ====== -->
+<div class="site-wrap">
+  <div class="ad-slot" id="ad-top" aria-hidden="true">
+    <div class="ad-slot-label">Advertentie</div>
+    <!-- Google AdSense code hier plaatsen -->
+    <p style="font-size:12px;margin:0">728×90 – Leaderboard advertentieplaats</p>
+  </div>
+</div>
+
+<!-- ====== MAIN SIMULATOR ====== -->
+<main id="simulator" class="app-section">
+  <div class="site-wrap">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-label">Gratis online tool</div>
+      <h2 class="section-title">Lening Simulator – Bereken Uw Hypotheek</h2>
+      <p class="section-sub">Vul uw gegevens in en ontvang direct een volledig overzicht van uw woonlening.</p>
+    </div>
+
+    <!-- INPUT SECTION -->
+    <div class="g2" style="margin-bottom:28px">
+      <!-- Kolom 1: Aankoop & inkomen -->
+      <div>
+        <div class="card card-accent-top" style="margin-bottom:20px">
+          <div class="card-title"><div class="card-title-icon">🏠</div>Aankoopgegevens</div>
+
+          <div class="field">
+            <label class="field-label" for="aankoopprijs">Aankoopprijs woning (€)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_aankoopprijs" min="50000" max="1000000" step="5000" value="300000" aria-label="Aankoopprijs slider">
+              <span class="slider-val" id="sv_aankoopprijs">€ 300.000</span>
+            </div>
+            <input type="number" id="aankoopprijs" value="300000" min="0" step="1000" aria-label="Aankoopprijs in euro">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="eigeninbreng">Eigen vermogen (€)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_eigeninbreng" min="0" max="500000" step="1000" value="60000" aria-label="Eigen vermogen slider">
+              <span class="slider-val" id="sv_eigeninbreng">€ 60.000</span>
+            </div>
+            <input type="number" id="eigeninbreng" value="60000" min="0" aria-label="Eigen vermogen in euro">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="notariskosten">Notariskosten (€)</label>
+              <input type="number" id="notariskosten" value="5000" min="0">
+            </div>
+            <div class="field">
+              <label class="field-label" for="registratie">Registratierechten (€)</label>
+              <input type="number" id="registratie" value="18000" min="0">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="dossierkosten">Dossierkosten (€)</label>
+              <input type="number" id="dossierkosten" value="1500" min="0">
+            </div>
+            <div class="field">
+              <label class="field-label" for="renovatie">Renovatiekosten (€)</label>
+              <input type="number" id="renovatie" value="0" min="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-accent-top">
+          <div class="card-title"><div class="card-title-icon">💶</div>Inkomen &amp; Maandlast</div>
+          <div class="field">
+            <label class="field-label" for="inkomen">Netto maandinkomen (€)</label>
+            <input type="number" id="inkomen" value="3500" min="0">
+          </div>
+          <div class="field">
+            <label class="field-label" for="maxmaand">Gewenste max. maandlast (€)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_maxmaand" min="200" max="5000" step="50" value="1200" aria-label="Maximale maandlast slider">
+              <span class="slider-val" id="sv_maxmaand">€ 1.200</span>
+            </div>
+            <input type="number" id="maxmaand" value="1200" min="0">
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom 2: Lening & rente -->
+      <div>
+        <div class="card card-accent-top" style="margin-bottom:20px">
+          <div class="card-title"><div class="card-title-icon">📊</div>Leningparameters</div>
+
+          <div class="field">
+            <label class="field-label" for="leenbedrag">Leenbedrag (€)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_leenbedrag" min="10000" max="900000" step="1000" value="264000" aria-label="Leenbedrag slider">
+              <span class="slider-val" id="sv_leenbedrag">€ 264.000</span>
+            </div>
+            <input type="number" id="leenbedrag" value="264000" min="0" aria-label="Leenbedrag in euro">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="looptijd">Looptijd (jaren)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_looptijd" min="5" max="30" step="1" value="20" aria-label="Looptijd slider">
+              <span class="slider-val" id="sv_looptijd">20 jaar</span>
+            </div>
+            <input type="number" id="looptijd" value="20" min="1" max="30" aria-label="Looptijd in jaren">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="rentetype">Type rentevoet</label>
+            <select id="rentetype" aria-label="Kies rentetype">
+              <option value="vast">Vaste rentevoet</option>
+              <option value="variabel">Variabele rentevoet</option>
+              <option value="beide">Vergelijk beide</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="rente_vast">Vaste rentevoet (%)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_rente_vast" min="0.5" max="8" step="0.05" value="3.3" aria-label="Vaste rentevoet slider">
+              <span class="slider-val" id="sv_rente_vast">3,30%</span>
+            </div>
+            <input type="number" id="rente_vast" value="3.30" min="0.01" max="20" step="0.05">
+          </div>
+
+          <div class="field" id="var_field">
+            <label class="field-label" for="rente_var">Variabele rentevoet — startrente (%)</label>
+            <div class="slider-row">
+              <input type="range" id="sl_rente_var" min="0.5" max="8" step="0.05" value="2.9" aria-label="Variabele rentevoet slider">
+              <span class="slider-val" id="sv_rente_var">2,90%</span>
+            </div>
+            <input type="number" id="rente_var" value="2.90" min="0.01" max="20" step="0.05">
+          </div>
+          <div id="var_warning" style="display:none" class="alert alert-warn"><span class="alert-icon">⚠️</span><div>Variabele rente kan wijzigen. Simulatie op basis van startrente.</div></div>
+        </div>
+
+        <div class="card" style="border:2px dashed var(--border)">
+          <div class="card-title"><div class="card-title-icon">🔮</div>Extra scenario-parameters</div>
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="scen_rente">Alt. rentevoet (%)</label>
+              <input type="number" id="scen_rente" value="4.00" step="0.1" min="0">
+            </div>
+            <div class="field">
+              <label class="field-label" for="scen_jaar">Alt. looptijd (jaar)</label>
+              <input type="number" id="scen_jaar" value="25" min="1" max="30">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-full" onclick="bereken()" aria-label="Bereken lening">
+            🔄 Bereken mijn lening
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD SLOT SIDEBAR (wordt later activeer via AdSense) -->
+    <div class="ad-slot" id="ad-mid" aria-hidden="true">
+      <div class="ad-slot-label">Advertentie</div>
+      <p style="font-size:12px;margin:0">468×60 – Banner advertentieplaats</p>
+    </div>
+
+    <!-- RESULTATEN -->
+    <div id="resultaten" style="display:none">
+
+      <div id="alert_zone"></div>
+
+      <!-- Samenvatting -->
+      <div class="result-hero">
+        <h2>📋 Uw leningsoverzicht — Samenvatting</h2>
+        <div class="g4" style="margin-top:16px">
+          <div class="metric"><div class="m-label">Max. te lenen</div><div class="m-value" id="r_maxlenen">—</div><div class="m-sub">op basis van inkomen</div></div>
+          <div class="metric"><div class="m-label">Uw leenbedrag</div><div class="m-value" id="r_leenbedrag">—</div><div class="m-sub">totaal bedrag</div></div>
+          <div class="metric"><div class="m-label">Maandlast</div><div class="m-value" id="r_maandlast">—</div><div class="m-sub">vaste rentevoet</div></div>
+          <div class="metric"><div class="m-label">Eigen inbreng nodig</div><div class="m-value" id="r_eigennood">—</div><div class="m-sub">incl. bijkomende kosten</div></div>
+        </div>
+      </div>
+
+      <!-- Tab navigatie -->
+      <div class="tab-nav" role="tablist" aria-label="Resultaattabbladen">
+        <button class="tab-btn active" role="tab" aria-selected="true" onclick="showTab('overzicht',this)">Overzicht</button>
+        <button class="tab-btn" role="tab" onclick="showTab('vergelijking',this)">Vaste vs Variabel</button>
+        <button class="tab-btn" role="tab" onclick="showTab('tabel',this)">Aflossingstabel</button>
+        <button class="tab-btn" role="tab" onclick="showTab('scenarios',this)">Scenario's</button>
+        <button class="tab-btn" role="tab" onclick="showTab('tips',this)">Tips &amp; Uitleg</button>
+      </div>
+
+      <!-- TAB OVERZICHT -->
+      <div id="tab_overzicht" role="tabpanel">
+        <div class="g2">
+          <div>
+            <div class="card" style="margin-bottom:20px">
+              <div class="card-title"><div class="card-title-icon">📈</div>Kosten &amp; Terugbetaling</div>
+              <div class="g2">
+                <div class="metric"><div class="m-label">Totaal terugbetaald</div><div class="m-value" id="r_totaalbetaald" style="font-size:20px">—</div></div>
+                <div class="metric"><div class="m-label">Totale intresten</div><div class="m-value" id="r_totaalrente" style="font-size:20px;color:var(--warn)">—</div></div>
+                <div class="metric"><div class="m-label">Jaarlijkse aflossing</div><div class="m-value" id="r_jaarlijks" style="font-size:20px">—</div></div>
+                <div class="metric"><div class="m-label">Bijkomende kosten</div><div class="m-value" id="r_kosten" style="font-size:20px">—</div></div>
+              </div>
+              <div style="margin-top:18px">
+                <div style="font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px">Verhouding kapitaal / intresten</div>
+                <div class="prog-bar"><div class="prog-fill" id="prog_kap" style="width:50%"></div></div>
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:5px">
+                  <span>Kapitaal: <strong id="pct_kap">—</strong></span>
+                  <span>Intresten: <strong id="pct_rent">—</strong></span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title"><div class="card-title-icon">🏦</div>Kostenverdeling</div>
+              <div style="position:relative;height:220px"><canvas id="chartKosten" role="img" aria-label="Taartdiagram met kostenverdeling">Verdeling van kosten.</canvas></div>
+              <div id="legendKosten" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-size:12px;color:var(--muted)"></div>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="margin-bottom:20px">
+              <div class="card-title"><div class="card-title-icon">📉</div>Saldo doorheen de jaren</div>
+              <div style="position:relative;height:240px"><canvas id="chartSaldo" role="img" aria-label="Uitstaand saldo per jaar">Uitstaand saldo.</canvas></div>
+            </div>
+            <div class="card">
+              <div class="card-title"><div class="card-title-icon">📊</div>Kapitaal vs Intresten per jaar</div>
+              <div style="position:relative;height:240px"><canvas id="chartJaarlijks" role="img" aria-label="Kapitaal en intresten per jaar">Jaarlijkse verdeling.</canvas></div>
+              <div style="display:flex;gap:16px;margin-top:10px;font-size:12px;color:var(--muted)">
+                <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#1a4f8a;margin-right:4px"></span>Kapitaal</span>
+                <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#c0622a;margin-right:4px"></span>Intresten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB VERGELIJKING -->
+      <div id="tab_vergelijking" style="display:none" role="tabpanel">
+        <div class="card">
+          <div class="card-title"><div class="card-title-icon">⚖️</div>Vaste Rente vs Variabele Rente</div>
+          <div class="compare-grid">
+            <div>
+              <h3 style="font-family:var(--font-head);font-size:16px;margin-bottom:14px">Vaste Rentevoet <span id="cmp_vast_pct" style="font-size:13px;font-weight:400;color:var(--muted)"></span></h3>
+              <div class="g2" style="gap:12px">
+                <div class="metric"><div class="m-label">Maandlast</div><div class="m-value" id="cmp_vast_maand">—</div></div>
+                <div class="metric"><div class="m-label">Per jaar</div><div class="m-value" id="cmp_vast_jaar" style="font-size:18px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal betaald</div><div class="m-value" id="cmp_vast_totaal" style="font-size:16px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal intresten</div><div class="m-value" id="cmp_vast_rente" style="font-size:16px;color:var(--warn)">—</div></div>
+              </div>
+              <div class="tip-card" style="margin-top:14px">✅ <strong>Zekerheid:</strong> maandlast blijft altijd gelijk. Ideaal voor stabiel budgetbeheer.</div>
+            </div>
+            <div class="compare-vs">vs</div>
+            <div>
+              <h3 style="font-family:var(--font-head);font-size:16px;margin-bottom:14px">Variabele Rentevoet <span id="cmp_var_pct" style="font-size:13px;font-weight:400;color:var(--muted)"></span></h3>
+              <div class="g2" style="gap:12px">
+                <div class="metric"><div class="m-label">Maandlast (start)</div><div class="m-value" id="cmp_var_maand">—</div></div>
+                <div class="metric"><div class="m-label">Per jaar (start)</div><div class="m-value" id="cmp_var_jaar" style="font-size:18px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal betaald</div><div class="m-value" id="cmp_var_totaal" style="font-size:16px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal intresten</div><div class="m-value" id="cmp_var_rente" style="font-size:16px;color:var(--warn)">—</div></div>
+              </div>
+              <div class="tip-card" style="background:#fff8f0;border-left-color:var(--warn);margin-top:14px">⚠️ <strong>Risico:</strong> rente kan stijgen bij marktstijging. Lager startbedrag, maar onzeker.</div>
+            </div>
+          </div>
+          <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);text-align:center">
+            <div class="metric" style="display:inline-block;min-width:280px">
+              <div class="m-label">Maandelijks verschil (vast vs variabel)</div>
+              <div class="m-value" id="cmp_verschil" style="font-size:22px">—</div>
+              <div class="m-sub" id="cmp_verschil_sub"></div>
+            </div>
+          </div>
+          <div style="position:relative;height:280px;margin-top:24px"><canvas id="chartVergelijk" role="img" aria-label="Vergelijking vaste en variabele rentevoet">Vergelijking rentevoeten.</canvas></div>
+          <div style="display:flex;gap:16px;margin-top:10px;font-size:12px;color:var(--muted)">
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#1a4f8a;margin-right:4px"></span>Vaste rente (intresten per jaar)</span>
+            <span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#c0622a;margin-right:4px"></span>Variabele rente (intresten per jaar)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB AFLOSSINGSTABEL -->
+      <div id="tab_tabel" style="display:none" role="tabpanel">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:12px">
+            <div class="card-title" style="margin-bottom:0"><div class="card-title-icon">📋</div>Aflossingstabel</div>
+            <div class="toggle-group">
+              <button class="toggle-btn" onclick="toggleTabel('maand')" id="btn_maand">Per maand</button>
+              <button class="toggle-btn active" onclick="toggleTabel('jaar')" id="btn_jaar">Per jaar</button>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead id="tabelHead"></thead>
+              <tbody id="tabelBody"></tbody>
+            </table>
+          </div>
+          <div style="margin-top:16px;text-align:right">
+            <button class="btn btn-secondary" onclick="window.print()">🖨️ Afdrukken / PDF</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB SCENARIO's -->
+      <div id="tab_scenarios" style="display:none" role="tabpanel">
+        <div class="card">
+          <div class="card-title"><div class="card-title-icon">🔮</div>Scenario-vergelijking</div>
+          <div style="position:relative;height:300px;margin-bottom:24px"><canvas id="chartScenario" role="img" aria-label="Scenario vergelijking">Scenario's vergeleken.</canvas></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Scenario</th><th>Rente</th><th>Looptijd</th><th>Maandlast</th><th>Totaal betaald</th><th>Totale intresten</th></tr></thead>
+              <tbody id="scenarioBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB TIPS -->
+      <div id="tab_tips" style="display:none" role="tabpanel">
+        <div class="g2">
+          <div class="card">
+            <div class="card-title"><div class="card-title-icon">💡</div>Persoonlijke tips</div>
+            <div id="tips_lijst"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><div class="card-title-icon">📚</div>Hoe werkt een annuïteitenlening?</div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:14px">Bij een <strong>annuïteitenlening</strong> — de meest gebruikte hypotheekvorm in België — betaalt u elke maand hetzelfde bedrag. In het begin bestaat dit voornamelijk uit intresten; naarmate de lening vordert, betaalt u meer kapitaal terug.</p>
+            <div class="tip-card">📐 <strong>Formule:</strong> M = P × [r(1+r)ⁿ] / [(1+r)ⁿ−1]<br><span style="font-size:12px;color:var(--muted)">P = leenbedrag, r = maandelijkse rentevoet, n = totaal aantal maanden</span></div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px">🇧🇪 <strong>Registratierechten in België:</strong> normaal tarief is 12,5%. Bij uw enige en eigen woning onder bepaalde voorwaarden kan dit dalen tot 3% (abattement). Raadpleeg altijd een notaris voor de exacte kostprijs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom export -->
+      <div style="text-align:center;padding:24px 0;border-top:1px solid var(--border);margin-top:16px">
+        <button class="btn btn-secondary" onclick="window.print()">📄 Exporteer als PDF</button>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px">Gebruik Ctrl+P → "Opslaan als PDF" voor een volledige export</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ====== HOE WERKT HET ====== -->
+<section id="hoe-werkt-het" style="background:var(--card);padding:64px 0;border-top:1px solid var(--border)">
+  <div class="site-wrap">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-label">Eenvoudig in 3 stappen</div>
+      <h2 class="section-title">Hoe werkt de lening simulator?</h2>
+    </div>
+    <div class="g3">
+      <div style="text-align:center">
+        <div style="width:60px;height:60px;background:var(--accent-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px">1️⃣</div>
+        <h3 style="font-family:var(--font-head);font-size:18px;margin-bottom:8px">Vul uw gegevens in</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7">Geef de aankoopprijs, uw eigen vermogen, bijkomende kosten, inkomen en gewenste rentevoet in via de sliders of invoervelden.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="width:60px;height:60px;background:var(--accent-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px">2️⃣</div>
+        <h3 style="font-family:var(--font-head);font-size:18px;margin-bottom:8px">Ontvang direct resultaat</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7">De simulator berekent onmiddellijk uw maandlast, totale interestkosten, maximaal leenbedrag en een volledige aflossingstabel.</p>
+      </div>
+      <div style="text-align:center">
+        <div style="width:60px;height:60px;background:var(--accent-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px">3️⃣</div>
+        <h3 style="font-family:var(--font-head);font-size:18px;margin-bottom:8px">Vergelijk scenario's</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7">Test verschillende rentevoeten en looptijden naast elkaar. Exporteer uw berekening als PDF en bespreek ze met uw bankier of notaris.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== AD SLOT BOTTOM ====== -->
+<div class="site-wrap" style="padding:32px 20px 0">
+  <div class="ad-slot" id="ad-bottom" aria-hidden="true">
+    <div class="ad-slot-label">Advertentie</div>
+    <p style="font-size:12px;margin:0">728×90 – Bottom leaderboard advertentieplaats</p>
+  </div>
+</div>
+
+<!-- ====== FAQ SECTION (SEO) ====== -->
+<section id="faq" class="faq-section">
+  <div class="site-wrap">
+    <div style="text-align:center;margin-bottom:8px">
+      <div class="section-label">Veelgestelde vragen</div>
+      <h2 class="section-title">FAQ — Lening Simulator</h2>
+      <p class="section-sub">Antwoorden op de meest gestelde vragen over het berekenen van een woonlening in België.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Hoeveel kan ik lenen voor een woning in België?</h3>
+        <p>In België hanteren banken doorgaans een maximale schuldgraad van <strong>33% van uw netto-maandinkomen</strong>. Bij een inkomen van €3.500/maand kunt u dus maximaal €1.155 per maand aflossen. Onze simulator berekent dit automatisch op basis van uw inkomen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wat is het verschil tussen vaste en variabele rentevoet?</h3>
+        <p>Bij een <strong>vaste rentevoet</strong> blijft uw maandlast identiek gedurende de hele looptijd. Bij een <strong>variabele rentevoet</strong> (bv. 5/5/5) kan de rente elke 5 jaar herzien worden. Lager startbedrag, maar meer risico bij rentestijgingen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Welke bijkomende kosten zijn er bij een hypothecaire lening?</h3>
+        <p>Naast het leenbedrag betaalt u <strong>notariskosten</strong> (±1-2%), <strong>registratierechten</strong> (12,5% of 3% bij abattement), <strong>dossierkosten</strong> van de bank (±€500-1.500) en eventuele <strong>renovatiekosten</strong>. Reken op 10-15% bovenop de aankoopprijs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Hoe lang mag een woonlening duren in België?</h3>
+        <p>De meeste banken financieren woonleningen voor een periode van <strong>10 tot 30 jaar</strong>. Hoe langer de looptijd, hoe lager de maandlast, maar hoe meer intresten u totaal betaalt. Een kortere looptijd bespaart duizenden euro's aan interestkosten.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Hoeveel eigen vermogen heb ik nodig?</h3>
+        <p>Banken vragen doorgaans <strong>10 tot 20% eigen inbreng</strong>. Voor een woning van €300.000 betekent dit €30.000 tot €60.000. Houd ook de bijkomende kosten (notaris, registratie) apart van uw eigen inbreng, want die worden zelden gefinancierd.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is deze lening simulator gratis?</h3>
+        <p>Ja, onze lening simulator is <strong>volledig gratis</strong> en vereist geen registratie. Uw gegevens worden nergens opgeslagen. U kunt onbeperkt simulaties uitvoeren en resultaten exporteren naar PDF.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SEO TEKST BLOK ====== -->
+<section style="background:var(--bg);padding:56px 0">
+  <div class="site-wrap">
+    <div style="max-width:760px;margin:0 auto">
+      <h2 style="font-family:var(--font-head);font-size:26px;margin-bottom:16px">Lening simulator: alles wat u moet weten over uw woonlening</h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:14px">Een <strong>hypothecaire lening</strong> of <strong>woonlening</strong> is voor de meeste Belgen de grootste financiële beslissing van hun leven. Met onze gratis lening simulator kunt u snel en eenvoudig berekenen hoeveel u kunt lenen, wat uw maandelijkse aflossing wordt en hoeveel u totaal aan intresten betaalt.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:14px">De simulator houdt rekening met alle relevante factoren: uw <strong>eigen vermogen</strong>, de <strong>aankoopprijs van de woning</strong>, <strong>bijkomende kosten</strong> zoals notariskosten en registratierechten, de gewenste <strong>looptijd</strong> en de <strong>rentevoet</strong>. U kunt kiezen tussen een vaste en variabele rentevoet en beide opties naast elkaar vergelijken.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.8">De berekening gebruikt de officiële <strong>annuïteitsformule</strong> die ook door Belgische banken wordt gehanteerd. Het resultaat is een volledige <strong>aflossingstabel</strong> met maandelijkse opsplitsing van kapitaal en intresten, samen met handige tips om uw lening zo voordelig mogelijk te structureren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="site-wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🏠 LeningSimulator.be</div>
+        <p class="footer-desc">De meest complete en gebruiksvriendelijke lening simulator voor België. Gratis, anoniem en nauwkeurig.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Berekeningen</h4>
+        <ul>
+          <li><a href="#simulator">Hypotheek berekenen</a></li>
+          <li><a href="#simulator">Maandlast berekenen</a></li>
+          <li><a href="#simulator">Aflossingstabel</a></li>
+          <li><a href="#simulator">Scenario's vergelijken</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#hoe-werkt-het">Hoe werkt het?</a></li>
+          <li><a href="#">Privacybeleid</a></li>
+          <li><a href="#">Cookiebeleid</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 LeningSimulator.be — Alle rechten voorbehouden</span>
+      <span><a href="#" style="color:rgba(255,255,255,.5)">Privacy</a> · <a href="#" style="color:rgba(255,255,255,.5)">Cookies</a> · <a href="#" style="color:rgba(255,255,255,.5)">Contact</a></span>
+    </div>
+    <p class="footer-disclaimer">⚠️ <strong>Disclaimer:</strong> De berekeningen op deze website zijn louter indicatief en informatief. LeningSimulator.be verstrekt geen financieel advies. De werkelijke voorwaarden van een hypothecaire lening worden bepaald door uw bank of kredietverstrekker. Raadpleeg altijd een erkend financieel adviseur of notaris voor definitieve beslissingen.</p>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// COOKIE BANNER
+// ============================================================
+(function(){
+  if(localStorage.getItem('cookie_consent')){
+    document.getElementById('cookie-banner').style.display='none';
+  }
+})();
+function acceptCookie(){localStorage.setItem('cookie_consent','all');document.getElementById('cookie-banner').style.display='none';}
+function hideCookie(){localStorage.setItem('cookie_consent','necessary');document.getElementById('cookie-banner').style.display='none';}
+
+// ============================================================
+// HELPERS
+// ============================================================
+let charts={};
+let tabelModus='jaar';
+
+function fmt(n){return '€\u00a0'+Math.round(n).toLocaleString('nl-BE')}
+function fmtPct(n){return Number(n).toLocaleString('nl-BE',{minimumFractionDigits:2,maximumFractionDigits:2})+'%'}
+function el(id){return document.getElementById(id)}
+
+function linkSlider(slId,inId,lbl_fn){
+  const sl=el(slId),inp=el(inId),lbl=el('sv_'+slId.replace('sl_',''));
+  if(!sl||!inp)return;
+  const upd=v=>{if(lbl)lbl.textContent=lbl_fn(v);};
+  sl.addEventListener('input',()=>{inp.value=parseFloat(sl.value);upd(sl.value);});
+  inp.addEventListener('input',()=>{if(parseFloat(inp.value)>=parseFloat(sl.min)&&parseFloat(inp.value)<=parseFloat(sl.max))sl.value=inp.value;upd(inp.value);});
+  upd(sl.value);
+}
+
+function setupSliders(){
+  linkSlider('sl_aankoopprijs','aankoopprijs',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_eigeninbreng','eigeninbreng',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_leenbedrag','leenbedrag',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_looptijd','looptijd',v=>v+' jaar');
+  linkSlider('sl_rente_vast','rente_vast',v=>parseFloat(v).toFixed(2).replace('.',',')+'%');
+  linkSlider('sl_rente_var','rente_var',v=>parseFloat(v).toFixed(2).replace('.',',')+'%');
+  linkSlider('sl_maxmaand','maxmaand',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+
+  el('rentetype').addEventListener('change',()=>{
+    const v=el('rentetype').value;
+    el('var_field').style.display=(v==='vast')?'none':'block';
+    el('var_warning').style.display=(v==='vast')?'none':'flex';
+  });
+  el('rentetype').dispatchEvent(new Event('change'));
+}
+
+// ============================================================
+// BEREKENINGEN
+// ============================================================
+function annuiteit(P,r_jaar,n_jaar){
+  const n=n_jaar*12,r=r_jaar/100/12;
+  if(r===0)return P/n;
+  return P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+}
+
+function buildAmort(P,r_jaar,n_jaar){
+  const n=n_jaar*12,r=r_jaar/100/12;
+  const M=annuiteit(P,r_jaar,n_jaar);
+  let saldo=P,rows=[];
+  for(let i=1;i<=n;i++){
+    const rente_m=saldo*r;
+    const kap_m=M-rente_m;
+    saldo=Math.max(0,saldo-kap_m);
+    rows.push({mnd:i,jaar:Math.ceil(i/12),maandlast:M,rente:rente_m,kapitaal:kap_m,saldo});
+  }
+  return rows;
+}
+
+function aggJaar(rows){
+  const map={};
+  rows.forEach(r=>{
+    if(!map[r.jaar])map[r.jaar]={jaar:r.jaar,maandlast:r.maandlast,rente:0,kapitaal:0,saldo:r.saldo};
+    map[r.jaar].rente+=r.rente;
+    map[r.jaar].kapitaal+=r.kapitaal;
+    map[r.jaar].saldo=r.saldo;
+  });
+  return Object.values(map);
+}
+
+function destroyChart(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+
+// ============================================================
+// BEREKEN
+// ============================================================
+function bereken(){
+  const aankoopprijs=parseFloat(el('aankoopprijs').value)||0;
+  const eigeninbreng=parseFloat(el('eigeninbreng').value)||0;
+  const notaris=parseFloat(el('notariskosten').value)||0;
+  const registratie=parseFloat(el('registratie').value)||0;
+  const dossier=parseFloat(el('dossierkosten').value)||0;
+  const renovatie=parseFloat(el('renovatie').value)||0;
+  const inkomen=parseFloat(el('inkomen').value)||0;
+  const maxmaand=parseFloat(el('maxmaand').value)||0;
+  const leenbedrag_input=parseFloat(el('leenbedrag').value)||0;
+  const looptijd=parseInt(el('looptijd').value)||20;
+  const rente_vast=parseFloat(el('rente_vast').value)||3.3;
+  const rente_var=parseFloat(el('rente_var').value)||2.9;
+  const scen_rente=parseFloat(el('scen_rente').value)||4;
+  const scen_jaar=parseInt(el('scen_jaar').value)||25;
+
+  if(aankoopprijs<=0||leenbedrag_input<=0){
+    alert('Vul een geldige aankoopprijs en leenbedrag in.');return;
+  }
+
+  const bijkomende=notaris+registratie+dossier+renovatie;
+  const totaal_nodig=aankoopprijs+bijkomende;
+  const lening=leenbedrag_input;
+
+  const r=rente_vast/100/12,n=looptijd*12;
+  const maxlenen=r>0?(inkomen*0.33)*(Math.pow(1+r,n)-1)/(r*Math.pow(1+r,n)):(inkomen*0.33)*n;
+
+  const maandlast_vast=annuiteit(lening,rente_vast,looptijd);
+  const maandlast_var=annuiteit(lening,rente_var,looptijd);
+  const totaal_vast=maandlast_vast*looptijd*12;
+  const totaal_var=maandlast_var*looptijd*12;
+  const totaal_rente_vast=totaal_vast-lening;
+  const totaal_rente_var=totaal_var-lening;
+
+  // Summary
+  el('r_maxlenen').textContent=fmt(maxlenen);
+  el('r_leenbedrag').textContent=fmt(lening);
+  el('r_maandlast').textContent=fmt(maandlast_vast);
+  el('r_eigennood').textContent=fmt(Math.max(0,totaal_nodig-lening));
+  el('r_totaalbetaald').textContent=fmt(totaal_vast);
+  el('r_totaalrente').textContent=fmt(totaal_rente_vast);
+  el('r_jaarlijks').textContent=fmt(maandlast_vast*12);
+  el('r_kosten').textContent=fmt(bijkomende);
+
+  const pct_kap=Math.round(lening/totaal_vast*100);
+  el('prog_kap').style.width=pct_kap+'%';
+  el('pct_kap').textContent=pct_kap+'%';
+  el('pct_rent').textContent=(100-pct_kap)+'%';
+
+  // Alerts
+  let alerts='';
+  const pctInk=inkomen>0?maandlast_vast/inkomen*100:0;
+  if(inkomen>0&&pctInk>33)alerts+=`<div class="alert alert-warn"><span class="alert-icon">⚠️</span><div><strong>Opgelet!</strong> Uw maandlast (${fmt(maandlast_vast)}) is ${pctInk.toFixed(0)}% van uw netto-inkomen. Banken hanteren een maximum van 33%. Overweeg een langere looptijd of hoger eigen vermogen.</div></div>`;
+  else if(inkomen>0&&pctInk<=33)alerts+=`<div class="alert alert-ok"><span class="alert-icon">✅</span><div>Uw schuldgraad (${pctInk.toFixed(0)}%) valt binnen de norm van 33%. Uw dossier staat er goed voor.</div></div>`;
+  if(eigeninbreng<totaal_nodig*0.1)alerts+=`<div class="alert alert-warn"><span class="alert-icon">💡</span><div>Uw eigen inbreng is minder dan 10%. Sommige banken vereisen minimaal 10–20% eigen inbreng voor goedkeuring.</div></div>`;
+  if(maxmaand>0&&maandlast_vast>maxmaand)alerts+=`<div class="alert alert-danger"><span class="alert-icon">🔴</span><div>De berekende maandlast (${fmt(maandlast_vast)}) overschrijdt uw gewenste maximum (${fmt(maxmaand)}). Overweeg een langere looptijd of een lager leenbedrag.</div></div>`;
+  el('alert_zone').innerHTML=alerts;
+
+  // Vergelijking
+  el('cmp_vast_pct').textContent=fmtPct(rente_vast);
+  el('cmp_var_pct').textContent=fmtPct(rente_var);
+  el('cmp_vast_maand').textContent=fmt(maandlast_vast);
+  el('cmp_vast_jaar').textContent=fmt(maandlast_vast*12);
+  el('cmp_vast_totaal').textContent=fmt(totaal_vast);
+  el('cmp_vast_rente').textContent=fmt(totaal_rente_vast);
+  el('cmp_var_maand').textContent=fmt(maandlast_var);
+  el('cmp_var_jaar').textContent=fmt(maandlast_var*12);
+  el('cmp_var_totaal').textContent=fmt(totaal_var);
+  el('cmp_var_rente').textContent=fmt(totaal_rente_var);
+  const verschil=maandlast_vast-maandlast_var;
+  el('cmp_verschil').textContent=fmt(Math.abs(verschil));
+  el('cmp_verschil_sub').textContent=verschil>0?`Vaste rente kost ${fmt(Math.abs(verschil))}/maand meer`:`Variabele rente kost ${fmt(Math.abs(verschil))}/maand meer`;
+
+  // Amortisatie
+  const amort_vast=buildAmort(lening,rente_vast,looptijd);
+  const amort_var=buildAmort(lening,rente_var,looptijd);
+  const jaar_vast=aggJaar(amort_vast);
+  const jaar_var=aggJaar(amort_var);
+  const labels_jaar=jaar_vast.map(r=>'Jaar '+r.jaar);
+
+  // Chart: Kosten
+  destroyChart('chartKosten');
+  const kd=[lening,notaris,registratie,dossier,renovatie];
+  const kl=['Leenbedrag','Notaris','Registratie','Dossierkosten','Renovatie'];
+  const kc=['#1a4f8a','#c0622a','#1e6b3c','#7a5230','#5a4acd'];
+  const kf=kl.map((l,i)=>({l,v:kd[i],c:kc[i]})).filter(x=>x.v>0);
+  charts['chartKosten']=new Chart(el('chartKosten'),{type:'doughnut',data:{labels:kf.map(x=>x.l),datasets:[{data:kf.map(x=>x.v),backgroundColor:kf.map(x=>x.c),borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+  el('legendKosten').innerHTML=kf.map(x=>`<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${x.c}"></span>${x.l}: ${fmt(x.v)}</span>`).join('');
+
+  // Chart: Saldo
+  destroyChart('chartSaldo');
+  charts['chartSaldo']=new Chart(el('chartSaldo'),{type:'line',data:{labels:['Start',...labels_jaar],datasets:[{label:'Vaste rente',data:[lening,...jaar_vast.map(r=>Math.round(r.saldo))],borderColor:'#1a4f8a',backgroundColor:'rgba(26,79,138,.08)',tension:.35,fill:true,borderWidth:2,pointRadius:2},{label:'Variabele rente',data:[lening,...jaar_var.map(r=>Math.round(r.saldo))],borderColor:'#c0622a',borderDash:[6,3],tension:.35,fill:false,borderWidth:2,pointRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'€'+Math.round(v/1000)+'k'}}}}});
+
+  // Chart: Kapitaal vs Intresten
+  destroyChart('chartJaarlijks');
+  charts['chartJaarlijks']=new Chart(el('chartJaarlijks'),{type:'bar',data:{labels:labels_jaar,datasets:[{label:'Kapitaal',data:jaar_vast.map(r=>Math.round(r.kapitaal)),backgroundColor:'#1a4f8a'},{label:'Intresten',data:jaar_vast.map(r=>Math.round(r.rente)),backgroundColor:'#c0622a'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{stacked:true,ticks:{maxRotation:45}},y:{stacked:true,ticks:{callback:v=>'€'+Math.round(v/1000)+'k'}}}}});
+
+  // Chart: Vergelijk
+  destroyChart('chartVergelijk');
+  charts['chartVergelijk']=new Chart(el('chartVergelijk'),{type:'bar',data:{labels:labels_jaar,datasets:[{label:'Vaste rente (intresten)',data:jaar_vast.map(r=>Math.round(r.rente)),backgroundColor:'#1a4f8a'},{label:'Variabele rente (intresten)',data:jaar_var.map(r=>Math.round(r.rente)),backgroundColor:'#c0622a'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'€'+Math.round(v/1000)+'k'}},x:{ticks:{maxRotation:45}}}}});
+
+  // Scenario's
+  const scenarios=[
+    {label:'Uw scenario',rente:rente_vast,jaar:looptijd,highlight:true},
+    {label:'Scenario A — alt. rente',rente:scen_rente,jaar:looptijd},
+    {label:'Scenario B — alt. looptijd',rente:rente_vast,jaar:scen_jaar},
+    {label:'Scenario C — beide',rente:scen_rente,jaar:scen_jaar},
+    {label:'Korte looptijd (15j)',rente:rente_vast,jaar:15},
+    {label:'Lage rente (2%)',rente:2,jaar:looptijd},
+    {label:'Hoge rente (5%)',rente:5,jaar:looptijd},
+  ];
+  const scenRows=scenarios.map(s=>{const m=annuiteit(lening,s.rente,s.jaar);const tot=m*s.jaar*12;return{...s,maand:m,totaal:tot,rente_t:tot-lening};});
+  el('scenarioBody').innerHTML=scenRows.map(s=>`<tr style="${s.highlight?'font-weight:600;background:var(--accent-light)':''}"><td>${s.label}</td><td>${fmtPct(s.rente)}</td><td>${s.jaar} jaar</td><td>${fmt(s.maand)}</td><td>${fmt(s.totaal)}</td><td class="td-warn">${fmt(s.rente_t)}</td></tr>`).join('');
+
+  destroyChart('chartScenario');
+  const colors=['#1a4f8a','#2d7a60','#c0622a','#7a3a80','#1a6a3a','#1a6080','#c03030'];
+  charts['chartScenario']=new Chart(el('chartScenario'),{type:'bar',data:{labels:scenRows.map(s=>s.label),datasets:[{label:'Maandlast',data:scenRows.map(s=>Math.round(s.maand)),backgroundColor:colors}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'€'+Math.round(v)}},x:{ticks:{maxRotation:30}}}}});
+
+  // Tabel
+  renderTabel(amort_vast,jaar_vast);
+
+  // Tips
+  const tips=[];
+  if(looptijd>20)tips.push({icon:'⏱️',txt:`<strong>Kortere looptijd</strong> = minder totale interest. Bij 15 jaar i.p.v. ${looptijd} jaar bespaart u ${fmt(totaal_rente_vast-(annuiteit(lening,rente_vast,15)*15*12-lening))} aan intresten.`});
+  if(eigeninbreng<aankoopprijs*0.2)tips.push({icon:'💼',txt:'<strong>Meer eigen inbreng</strong> verlaagt zowel uw maandlast als de totale interestkosten. Probeer minstens 20% in te brengen.'});
+  tips.push({icon:'📈',txt:`Bij een rente van ${fmtPct(rente_vast)} betaalt u over ${looptijd} jaar in totaal <strong>${fmt(totaal_rente_vast)} aan intresten</strong> — dat is ${Math.round(totaal_rente_vast/lening*100)}% bovenop het geleende bedrag.`});
+  tips.push({icon:'🔄',txt:'<strong>Vervroegde terugbetaling</strong> in de eerste jaren reduceert de interestlast aanzienlijk, omdat de rente dan nog het hoogste is.'});
+  tips.push({icon:'🇧🇪',txt:'In België kunt u mogelijk genieten van de <strong>Vlaamse woonbonus</strong> of belastingvermindering. Informeer u bij uw notaris of belastingadviseur.'});
+  if(inkomen>0&&pctInk<25)tips.push({icon:'✅',txt:'Uw schuldgraad is gunstig. U kunt eventueel kiezen voor een <strong>kortere looptijd</strong> zonder de 33%-norm te overschrijden.'});
+  el('tips_lijst').innerHTML=tips.map(t=>`<div class="tip-card">${t.icon} ${t.txt}</div>`).join('');
+
+  el('resultaten').style.display='block';
+  setTimeout(()=>el('resultaten').scrollIntoView({behavior:'smooth',block:'start'}),100);
+}
+
+function renderTabel(amort,jaar){
+  if(tabelModus==='jaar'){
+    el('tabelHead').innerHTML='<tr><th>Jaar</th><th>Maandlast</th><th>Kapitaal (jaar)</th><th>Intresten (jaar)</th><th>Uitst. saldo</th></tr>';
+    el('tabelBody').innerHTML=jaar.map(r=>`<tr><td>Jaar ${r.jaar}</td><td>${fmt(r.maandlast)}</td><td>${fmt(r.kapitaal)}</td><td class="td-warn">${fmt(r.rente)}</td><td>${fmt(r.saldo)}</td></tr>`).join('');
+  }else{
+    el('tabelHead').innerHTML='<tr><th>Maand</th><th>Maandlast</th><th>Kapitaal</th><th>Intresten</th><th>Uitst. saldo</th></tr>';
+    el('tabelBody').innerHTML=amort.map(r=>`<tr><td>Maand ${r.mnd} <span style="color:var(--muted);font-size:11px">(jr ${r.jaar})</span></td><td>${fmt(r.maandlast)}</td><td>${fmt(r.kapitaal)}</td><td class="td-warn">${fmt(r.rente)}</td><td>${fmt(r.saldo)}</td></tr>`).join('');
+  }
+}
+
+function toggleTabel(modus){
+  tabelModus=modus;
+  el('btn_maand').classList.toggle('active',modus==='maand');
+  el('btn_jaar').classList.toggle('active',modus==='jaar');
+  bereken();
+}
+
+function showTab(tab,btn){
+  document.querySelectorAll('[id^=tab_]').forEach(t=>t.style.display='none');
+  document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+  el('tab_'+tab).style.display='';
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+}
+
+setupSliders();
+bereken();
+</script>
+</body>
+</html>
