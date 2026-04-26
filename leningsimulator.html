@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="nl" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lening Simulator België – Hypotheek Berekenen 2025 | Gratis Online Tool</title>
+<meta name="description" content="Bereken gratis uw hypothecaire lening of woonlening. Voer uw aankoopprijs, eigen vermogen en rentevoet in en ontvang direct een volledige aflossingstabel, maandlast en totale interestkosten.">
+<meta name="keywords" content="lening simulator, hypotheek berekenen, woonlening berekenen, hypothecaire lening simulator, maandlast berekenen, lening calculator België">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arthurdb111.github.io/leningsimulator">
+<meta property="og:title" content="Lening Simulator België – Hypotheek Gratis Berekenen">
+<meta property="og:description" content="De meest complete lening simulator voor België. Gratis en zonder registratie.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Lening Simulator","url":"https://arthurdb111.github.io/leningsimulator","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"nl-BE"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--white:#ffffff;--bg:#f7f6f3;--gold:#9a7b3a;--gold-light:#c9a84c;--dark:#1a1a18;--grey:#7a7570;--border:#e2ddd6;--font-title:'Cormorant Garamond',Georgia,serif;--font-body:'Outfit',system-ui,sans-serif;--font-mono:'DM Mono',monospace;--radius:2px;--tr:.22s ease}
+body{font-family:var(--font-body);font-weight:300;background-color:var(--white);background-image:radial-gradient(circle,#d4c9b8 1px,transparent 1px);background-size:22px 22px;color:var(--dark);font-size:15px;line-height:1.7;min-height:100vh}
+h1,h2,h3,h4{font-family:var(--font-title);font-weight:400;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(30px,5vw,52px)}
+h2{font-size:clamp(20px,3vw,32px)}
+h3{font-size:18px}
+p{font-weight:300;color:var(--grey)}
+strong{font-weight:500;color:var(--dark)}
+label{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);display:block;margin-bottom:6px}
+a{color:var(--gold);text-decoration:none;transition:color var(--tr)}
+a:hover{color:var(--gold-light)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.site-header{background:var(--white);border-bottom:1px solid var(--border);padding:18px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--font-title);font-size:20px;color:var(--dark);display:flex;align-items:center;gap:10px;letter-spacing:.02em}
+.logo-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);transition:color var(--tr)}
+.nav-links a:hover{color:var(--dark)}
+@media(max-width:600px){.nav-links{display:none}}
+.hero{padding:80px 0 64px;border-bottom:1px solid var(--border);background:var(--white)}
+.hero-inner{max-width:680px}
+.hero-eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+.hero h1{color:var(--dark);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:16px;font-weight:300;color:var(--grey);line-height:1.75;margin-bottom:32px;max-width:540px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);border:1px solid var(--border);padding:5px 12px;background:var(--white)}
+.section{padding:56px 0}
+.section-border{border-bottom:1px solid var(--border)}
+.eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.section-title{color:var(--dark);margin-bottom:8px}
+.section-sub{font-size:14px;color:var(--grey);margin-bottom:36px}
+.card{background:var(--white);border:1px solid var(--border);padding:28px;transition:border-color var(--tr);position:relative}
+.card::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--gold);opacity:0;transition:opacity var(--tr)}
+.card:hover::after{opacity:1}
+.card:hover{border-color:var(--gold)}
+.card-title{font-family:var(--font-title);font-size:17px;color:var(--dark);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.card-mark{width:3px;height:16px;background:var(--gold);flex-shrink:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(max-width:480px){.g4{grid-template-columns:1fr 1fr}}
+.field{margin-bottom:20px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.field-row{grid-template-columns:1fr}}
+input[type=number],select{width:100%;border:1px solid var(--border);padding:10px 14px;font-family:var(--font-body);font-size:14px;font-weight:300;color:var(--dark);background:var(--white);outline:none;transition:border-color var(--tr);-moz-appearance:textfield}
+input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+input[type=number]:focus,select:focus{border-color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin:6px 0 2px;cursor:pointer}
+.slider-row{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.slider-val{font-family:var(--font-mono);font-size:12px;color:var(--gold);min-width:90px;text-align:right;white-space:nowrap}
+.metric{padding:20px;border:1px solid var(--border);background:var(--white);transition:border-color var(--tr)}
+.metric:hover{border-color:var(--gold)}
+.metric .m-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.metric .m-value{font-family:var(--font-title);font-size:26px;color:var(--dark);line-height:1}
+.metric .m-sub{font-size:11px;color:var(--grey);margin-top:5px;font-family:var(--font-mono)}
+.metric-gold .m-value{color:var(--gold)}
+.metric-warn .m-value{color:#8b5e3c}
+.result-hero{background:var(--dark);padding:40px;margin-bottom:32px}
+.result-hero h2{color:var(--white);margin-bottom:24px}
+.result-hero .eyebrow{color:var(--gold-light)}
+.result-hero .metric{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08)}
+.result-hero .metric:hover{border-color:var(--gold)}
+.result-hero .m-label{color:rgba(255,255,255,.4)}
+.result-hero .m-value{color:var(--white)}
+.result-hero .m-sub{color:rgba(255,255,255,.3)}
+.result-hero .metric-gold .m-value{color:var(--gold-light)}
+.alert{padding:14px 18px;font-size:13px;font-family:var(--font-body);font-weight:300;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start;border-left:2px solid}
+.alert-warn{background:#fdfaf4;border-color:var(--gold);color:#6b4f1a}
+.alert-ok{background:#f5fbf7;border-color:#5a8a6a;color:#2d5a3d}
+.alert-danger{background:#fdf5f5;border-color:#8b4040;color:#5a2020}
+.alert-icon{font-size:13px;flex-shrink:0;margin-top:2px;font-family:var(--font-mono)}
+.tab-nav{display:flex;border-bottom:1px solid var(--border);margin-bottom:32px;overflow-x:auto}
+.tab-btn{padding:12px 20px;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:none;background:none;color:var(--grey);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:all var(--tr)}
+.tab-btn.active{color:var(--dark);border-bottom-color:var(--gold)}
+.tab-btn:hover{color:var(--dark)}
+.table-scroll{max-height:420px;overflow-y:auto;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:13px;font-family:var(--font-body);font-weight:300}
+th{background:var(--bg);padding:10px 14px;text-align:right;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);border-bottom:1px solid var(--border);position:sticky;top:0;font-weight:400}
+th:first-child{text-align:left}
+td{padding:9px 14px;text-align:right;border-bottom:1px solid var(--border);color:var(--dark)}
+td:first-child{text-align:left;color:var(--grey)}
+tr:hover td{background:var(--bg)}
+.td-gold{color:var(--gold)!important}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:none;transition:all var(--tr)}
+.btn-dark{background:var(--dark);color:var(--white)}
+.btn-dark:hover{background:var(--gold)}
+.btn-outline{background:transparent;color:var(--dark);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-full{width:100%;justify-content:center;padding:14px}
+.toggle-group{display:flex;border:1px solid var(--border);overflow:hidden}
+.toggle-btn{flex:1;padding:8px 14px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:none;background:var(--white);color:var(--grey);transition:all var(--tr)}
+.toggle-btn.active{background:var(--dark);color:var(--white)}
+.compare-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:16px;align-items:start}
+.compare-vs{display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--grey);padding-top:40px;text-transform:uppercase}
+@media(max-width:768px){.compare-grid{grid-template-columns:1fr}.compare-vs{padding:8px 0}}
+.tip{border-left:1px solid var(--gold);padding:12px 16px;font-size:13px;font-weight:300;margin-bottom:10px;background:linear-gradient(90deg,#fdfaf4,var(--white));color:var(--dark)}
+.prog-bar{height:2px;background:var(--border);margin-top:8px}
+.prog-fill{height:100%;background:var(--gold);transition:width .6s ease}
+.divider{border:none;border-top:1px solid var(--border);margin:28px 0}
+.faq-item{padding:24px 0;border-bottom:1px solid var(--border)}
+.faq-item:first-child{border-top:1px solid var(--border)}
+.faq-item h3{font-family:var(--font-title);font-size:17px;color:var(--dark);margin-bottom:8px}
+.faq-item p{font-size:14px;font-weight:300;color:var(--grey);line-height:1.75}
+.site-footer{background:var(--dark);color:rgba(255,255,255,.5);padding:48px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand{font-family:var(--font-title);font-size:20px;color:var(--white);margin-bottom:10px}
+.footer-desc{font-size:13px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.35)}
+.footer-col h4{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px;font-weight:400}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{font-size:13px;color:rgba(255,255,255,.4);transition:color var(--tr)}
+.footer-col ul li a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;color:rgba(255,255,255,.2)}
+.footer-disclaimer{font-size:11px;color:rgba(255,255,255,.18);margin-top:16px;line-height:1.65;font-weight:300}
+.ad-slot{border:1px dashed var(--border);padding:16px;text-align:center;margin:24px 0;background:var(--bg)}
+.ad-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--border);margin-bottom:4px}
+.ad-slot p{font-size:11px;color:var(--border);margin:0}
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding:16px 24px;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#cookie-banner p{font-size:12px;font-weight:300;color:rgba(255,255,255,.45);max-width:600px}
+.ck-btns{display:flex;gap:8px;flex-shrink:0}
+.ck-btn{padding:8px 16px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border:1px solid rgba(255,255,255,.15);background:transparent;color:rgba(255,255,255,.45);transition:all var(--tr)}
+.ck-btn-ok{background:var(--gold);border-color:var(--gold);color:var(--white)}
+.ck-btn-ok:hover{background:var(--gold-light)}
+@media print{.site-header,.hero,.site-footer,#cookie-banner,.ad-slot,.btn,.tab-nav{display:none!important}.card{break-inside:avoid}body{background:white}}
+</style>
+</head>
+<body>
+
+<div id="cookie-banner">
+  <p>Wij gebruiken cookies om uw ervaring te verbeteren. Lees ons <a href="#cookiebeleid" style="color:var(--gold-light)">cookiebeleid</a>.</p>
+  <div class="ck-btns">
+    <button class="ck-btn" onclick="hideCk()">Enkel noodzakelijke</button>
+    <button class="ck-btn ck-btn-ok" onclick="acceptCk()">Accepteren</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo" style="gap:12px"><svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;flex-shrink:0">
+  <defs>
+    <linearGradient id="nd" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0A0A0A"/><stop offset="100%" style="stop-color:#2A2A2A"/></linearGradient>
+    <linearGradient id="nl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9a7b3a"/><stop offset="100%" style="stop-color:#c9a84c"/></linearGradient>
+  </defs>
+  <g transform="translate(150,150)">
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#1a1a18" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="121" fill="none" stroke="#e2ddd6" stroke-width="0.8"/>
+    <line x1="0" y1="-121" x2="0" y2="-130" stroke="#1a1a18" stroke-width="4.5"/>
+    <line x1="0" y1="121" x2="0" y2="130" stroke="#1a1a18" stroke-width="2.5"/>
+    <line x1="-121" y1="0" x2="-130" y2="0" stroke="#1a1a18" stroke-width="2.5"/>
+    <line x1="121" y1="0" x2="130" y2="0" stroke="#1a1a18" stroke-width="2.5"/>
+    <polygon points="72,-72 7,-7 14,14 -7,7" fill="url(#nd)"/>
+    <polygon points="-72,72 -7,7 -14,-14 7,-7" fill="url(#nl)"/>
+    <circle cx="0" cy="0" r="11" fill="#1a1a18"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="2.5" fill="#1a1a18"/>
+  </g>
+</svg><span style="font-family:var(--font-title);font-size:18px;color:var(--dark);letter-spacing:.02em">LeningSimulator<span style="color:var(--gold)">.be</span></span></div>
+      <div class="nav-links">
+        <a href="#simulator">Simulator</a>
+        <a href="#uitleg">Uitleg</a>
+        <a href="#faq">FAQ</a>
+        <a href="http://mijnbeurskompas.be" target="_blank">MijnBeursKompas →</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div style="margin-bottom:28px"><svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:460px;height:auto">
+  <defs>
+    <linearGradient id="nd2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0A0A0A"/><stop offset="100%" style="stop-color:#2A2A2A"/></linearGradient>
+    <linearGradient id="nl2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9a7b3a"/><stop offset="100%" style="stop-color:#c9a84c"/></linearGradient>
+  </defs>
+  <g transform="translate(350, 172)">
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#111111" stroke-width="2.2"/>
+    <circle cx="0" cy="0" r="121" fill="none" stroke="#CCCCCC" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="114" fill="none" stroke="#EEEEEE" stroke-width="0.4"/>
+    <line x1="0" y1="-121" x2="0" y2="-130" stroke="#111111" stroke-width="4.5"/>
+    <line x1="0" y1="121" x2="0" y2="130" stroke="#111111" stroke-width="2.5"/>
+    <line x1="-121" y1="0" x2="-130" y2="0" stroke="#111111" stroke-width="2.5"/>
+    <line x1="121" y1="0" x2="130" y2="0" stroke="#111111" stroke-width="2.5"/>
+    <line x1="83" y1="-83" x2="90" y2="-90" stroke="#555555" stroke-width="2"/>
+    <line x1="-83" y1="-83" x2="-90" y2="-90" stroke="#555555" stroke-width="2"/>
+    <line x1="83" y1="83" x2="90" y2="90" stroke="#555555" stroke-width="2"/>
+    <line x1="-83" y1="83" x2="-90" y2="90" stroke="#555555" stroke-width="2"/>
+    <line x1="43" y1="-112" x2="47" y2="-121" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="-43" y1="-112" x2="-47" y2="-121" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="112" y1="-43" x2="121" y2="-47" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="112" y1="43" x2="121" y2="47" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="43" y1="112" x2="47" y2="121" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="-43" y1="112" x2="-47" y2="121" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="-112" y1="-43" x2="-121" y2="-47" stroke="#AAAAAA" stroke-width="1.2"/>
+    <line x1="-112" y1="43" x2="-121" y2="47" stroke="#AAAAAA" stroke-width="1.2"/>
+    <text x="0" y="-139" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#111111">N</text>
+    <text x="0" y="152" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="400" fill="#777777">Z</text>
+    <text x="143" y="5" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="400" fill="#777777">O</text>
+    <text x="-143" y="5" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="400" fill="#777777">W</text>
+    <polygon points="72,-72 7,-7 14,14 -7,7" fill="url(#nd2)"/>
+    <polygon points="-72,72 -7,7 -14,-14 7,-7" fill="url(#nl2)"/>
+    <circle cx="0" cy="0" r="11" fill="#111111"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="2.5" fill="#111111"/>
+  </g>
+  <text x="350" y="96" text-anchor="middle" font-family="'Gill Sans',Calibri,sans-serif" font-size="14" font-weight="300" letter-spacing="20" fill="#999999">MIJN</text>
+  <text x="350" y="178" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="700" letter-spacing="3" fill="#111111">BEURSKOMPAS</text>
+  <line x1="140" y1="196" x2="260" y2="196" stroke="#CCCCCC" stroke-width="0.7"/>
+  <rect x="264" y="192" width="8" height="8" fill="none" stroke="#AAAAAA" stroke-width="0.7" transform="rotate(45 268 196)"/>
+  <line x1="276" y1="196" x2="560" y2="196" stroke="#CCCCCC" stroke-width="0.7"/>
+  <text x="350" y="226" text-anchor="middle" font-family="'Gill Sans',Calibri,sans-serif" font-size="9.5" font-weight="300" letter-spacing="5" fill="#BBBBBB">UW GIDS OP DE FINANCIËLE MARKTEN</text>
+</svg></div>
+      <div class="hero-eyebrow">Gratis online tool — België 2026</div>
+      <h1>De slimste <em>lening simulator</em><br>voor uw woning</h1>
+      <p class="hero-sub">Bereken in seconden hoeveel u kunt lenen, wat uw maandlast is en wat u totaal betaalt aan intresten. Volledig transparant, zonder registratie.</p>
+      <div class="hero-badges">
+        <span class="badge">✓ Gratis & anoniem</span>
+        <span class="badge">✓ Vaste & variabele rente</span>
+        <span class="badge">✓ Volledige aflossingstabel</span>
+        <span class="badge">✓ PDF-export</span>
+        <span class="badge">✓ Bijgewerkt 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="ad-slot" aria-hidden="true"><div class="ad-label">Advertentie</div><p>728×90 — Google AdSense plaatshouder</p></div></div>
+
+<main id="simulator" class="section section-border">
+  <div class="wrap">
+    <div class="eyebrow">Hypotheeksimulatie</div>
+    <h2 class="section-title">Bereken uw woonlening</h2>
+    <p class="section-sub">Vul uw gegevens in en ontvang direct een volledig overzicht van uw hypothecaire lening.</p>
+
+    <div class="g2" style="margin-bottom:24px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card">
+          <div class="card-title"><div class="card-mark"></div>Aankoopgegevens</div>
+          <div class="field">
+            <label for="aankoopprijs">Aankoopprijs woning</label>
+            <div class="slider-row"><input type="range" id="sl_aankoopprijs" min="50000" max="1000000" step="5000" value="300000"><span class="slider-val" id="sv_aankoopprijs">€ 300.000</span></div>
+            <input type="number" id="aankoopprijs" value="300000" min="0" step="1000">
+          </div>
+          <div class="field">
+            <label for="eigeninbreng">Eigen vermogen</label>
+            <div class="slider-row"><input type="range" id="sl_eigeninbreng" min="0" max="500000" step="1000" value="60000"><span class="slider-val" id="sv_eigeninbreng">€ 60.000</span></div>
+            <input type="number" id="eigeninbreng" value="60000" min="0">
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="notariskosten">Notariskosten</label><input type="number" id="notariskosten" value="5000" min="0"></div>
+            <div class="field"><label for="registratie">Registratierechten</label><input type="number" id="registratie" value="6000" min="0"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="dossierkosten">Dossierkosten</label><input type="number" id="dossierkosten" value="1500" min="0"></div>
+            <div class="field"><label for="renovatie">Renovatiekosten</label><input type="number" id="renovatie" value="0" min="0"></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><div class="card-mark"></div>Inkomen & Maandlast</div>
+          <div class="field"><label for="inkomen">Netto maandinkomen</label><input type="number" id="inkomen" value="3500" min="0"></div>
+          <div class="field">
+            <label for="maxmaand">Gewenste max. maandlast</label>
+            <div class="slider-row"><input type="range" id="sl_maxmaand" min="200" max="5000" step="50" value="1200"><span class="slider-val" id="sv_maxmaand">€ 1.200</span></div>
+            <input type="number" id="maxmaand" value="1200" min="0">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card">
+          <div class="card-title"><div class="card-mark"></div>Leningparameters</div>
+          <div class="field">
+            <label for="leenbedrag">Leenbedrag</label>
+            <div class="slider-row"><input type="range" id="sl_leenbedrag" min="10000" max="900000" step="1000" value="264000"><span class="slider-val" id="sv_leenbedrag">€ 264.000</span></div>
+            <input type="number" id="leenbedrag" value="264000" min="0">
+          </div>
+          <div class="field">
+            <label for="looptijd">Looptijd</label>
+            <div class="slider-row"><input type="range" id="sl_looptijd" min="5" max="30" step="1" value="20"><span class="slider-val" id="sv_looptijd">20 jaar</span></div>
+            <input type="number" id="looptijd" value="20" min="1" max="30">
+          </div>
+          <div class="field"><label for="rentetype">Type rentevoet</label>
+            <select id="rentetype">
+              <option value="vast">Vaste rentevoet</option>
+              <option value="variabel">Variabele rentevoet</option>
+              <option value="beide">Vergelijk beide</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="rente_vast">Vaste rentevoet (%)</label>
+            <div class="slider-row"><input type="range" id="sl_rente_vast" min="0.5" max="8" step="0.05" value="3.3"><span class="slider-val" id="sv_rente_vast">3,30%</span></div>
+            <input type="number" id="rente_vast" value="3.30" min="0.01" max="20" step="0.05">
+          </div>
+          <div class="field" id="var_field" style="display:none">
+            <label for="rente_var">Variabele rentevoet — startrente (%)</label>
+            <div class="slider-row"><input type="range" id="sl_rente_var" min="0.5" max="8" step="0.05" value="2.9"><span class="slider-val" id="sv_rente_var">2,90%</span></div>
+            <input type="number" id="rente_var" value="2.90" min="0.01" max="20" step="0.05">
+          </div>
+          <div id="var_note" style="display:none;font-family:var(--font-mono);font-size:11px;color:var(--gold);margin:-8px 0 14px;letter-spacing:.04em">↳ Simulatie op startrente — werkelijk bedrag kan afwijken</div>
+        </div>
+        <div class="card" style="border-style:dashed">
+          <div class="card-title"><div class="card-mark"></div>Extra scenario-parameters</div>
+          <div class="field-row">
+            <div class="field"><label for="scen_rente">Alternatieve rente (%)</label><input type="number" id="scen_rente" value="4.00" step="0.1" min="0"></div>
+            <div class="field"><label for="scen_jaar">Alternatieve looptijd (j.)</label><input type="number" id="scen_jaar" value="25" min="1" max="30"></div>
+          </div>
+          <button class="btn btn-dark btn-full" onclick="bereken()">Bereken mijn lening →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot" aria-hidden="true"><div class="ad-label">Advertentie</div><p>468×60 — Google AdSense plaatshouder</p></div>
+
+    <div id="resultaten" style="display:none">
+      <div id="alert_zone"></div>
+
+      <div class="result-hero">
+        <div class="eyebrow">Uw leningsoverzicht</div>
+        <h2>Samenvatting</h2>
+        <div class="g4">
+          <div class="metric metric-gold"><div class="m-label">Max. te lenen</div><div class="m-value" id="r_maxlenen">—</div><div class="m-sub">op basis van inkomen</div></div>
+          <div class="metric"><div class="m-label">Uw leenbedrag</div><div class="m-value" id="r_leenbedrag">—</div><div class="m-sub">totaal bedrag</div></div>
+          <div class="metric"><div class="m-label">Maandlast</div><div class="m-value" id="r_maandlast">—</div><div class="m-sub">vaste rentevoet</div></div>
+          <div class="metric"><div class="m-label">Eigen inbreng nodig</div><div class="m-value" id="r_eigennood">—</div><div class="m-sub">incl. bijkomende kosten</div></div>
+        </div>
+      </div>
+
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" onclick="showTab('overzicht',this)">Overzicht</button>
+        <button class="tab-btn" onclick="showTab('vergelijking',this)">Vaste vs Variabel</button>
+        <button class="tab-btn" onclick="showTab('tabel',this)">Aflossingstabel</button>
+        <button class="tab-btn" onclick="showTab('scenarios',this)">Scenario's</button>
+        <button class="tab-btn" onclick="showTab('tips',this)">Tips & Uitleg</button>
+      </div>
+
+      <div id="tab_overzicht">
+        <div class="g2">
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div class="card">
+              <div class="card-title"><div class="card-mark"></div>Kosten & Terugbetaling</div>
+              <div class="g2">
+                <div class="metric"><div class="m-label">Totaal terugbetaald</div><div class="m-value" id="r_totaalbetaald" style="font-size:20px">—</div></div>
+                <div class="metric metric-warn"><div class="m-label">Totale intresten</div><div class="m-value" id="r_totaalrente" style="font-size:20px">—</div></div>
+                <div class="metric"><div class="m-label">Jaarlijkse aflossing</div><div class="m-value" id="r_jaarlijks" style="font-size:20px">—</div></div>
+                <div class="metric"><div class="m-label">Bijkomende kosten</div><div class="m-value" id="r_kosten" style="font-size:20px">—</div></div>
+              </div>
+              <div style="margin-top:20px">
+                <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">
+                  <span>Kapitaal: <strong id="pct_kap" style="color:var(--dark)">—</strong></span>
+                  <span>Intresten: <strong id="pct_rent" style="color:var(--dark)">—</strong></span>
+                </div>
+                <div class="prog-bar"><div class="prog-fill" id="prog_kap" style="width:60%"></div></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title"><div class="card-mark"></div>Kostenverdeling</div>
+              <div style="position:relative;height:210px"><canvas id="chartKosten"></canvas></div>
+              <div id="legendKosten" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-family:var(--font-mono);font-size:10px;color:var(--grey)"></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div class="card">
+              <div class="card-title"><div class="card-mark"></div>Saldo doorheen de jaren</div>
+              <div style="position:relative;height:230px"><canvas id="chartSaldo"></canvas></div>
+              <div style="display:flex;gap:16px;margin-top:10px;font-family:var(--font-mono);font-size:10px;color:var(--grey)">
+                <span><span style="display:inline-block;width:8px;height:8px;background:var(--dark);margin-right:5px"></span>Vaste rente</span>
+                <span><span style="display:inline-block;width:8px;height:8px;background:var(--gold);margin-right:5px"></span>Variabele rente</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title"><div class="card-mark"></div>Kapitaal vs Intresten per jaar</div>
+              <div style="position:relative;height:230px"><canvas id="chartJaarlijks"></canvas></div>
+              <div style="display:flex;gap:16px;margin-top:10px;font-family:var(--font-mono);font-size:10px;color:var(--grey)">
+                <span><span style="display:inline-block;width:8px;height:8px;background:var(--dark);margin-right:5px"></span>Kapitaal</span>
+                <span><span style="display:inline-block;width:8px;height:8px;background:var(--gold);margin-right:5px"></span>Intresten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab_vergelijking" style="display:none">
+        <div class="card">
+          <div class="card-title"><div class="card-mark"></div>Vaste Rente vs Variabele Rente</div>
+          <div class="compare-grid">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:14px">Vaste Rentevoet — <span id="cmp_vast_pct" style="color:var(--dark)"></span></div>
+              <div class="g2" style="gap:12px">
+                <div class="metric"><div class="m-label">Maandlast</div><div class="m-value" id="cmp_vast_maand">—</div></div>
+                <div class="metric"><div class="m-label">Per jaar</div><div class="m-value" id="cmp_vast_jaar" style="font-size:18px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal betaald</div><div class="m-value" id="cmp_vast_totaal" style="font-size:16px">—</div></div>
+                <div class="metric metric-warn"><div class="m-label">Totaal intresten</div><div class="m-value" id="cmp_vast_rente" style="font-size:16px">—</div></div>
+              </div>
+              <div class="tip" style="margin-top:14px">Zekerheid — maandlast blijft altijd gelijk. Ideaal voor stabiel budgetbeheer.</div>
+            </div>
+            <div class="compare-vs">vs</div>
+            <div>
+              <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:14px">Variabele Rentevoet — <span id="cmp_var_pct" style="color:var(--dark)"></span></div>
+              <div class="g2" style="gap:12px">
+                <div class="metric"><div class="m-label">Maandlast (start)</div><div class="m-value" id="cmp_var_maand">—</div></div>
+                <div class="metric"><div class="m-label">Per jaar (start)</div><div class="m-value" id="cmp_var_jaar" style="font-size:18px">—</div></div>
+                <div class="metric"><div class="m-label">Totaal betaald</div><div class="m-value" id="cmp_var_totaal" style="font-size:16px">—</div></div>
+                <div class="metric metric-warn"><div class="m-label">Totaal intresten</div><div class="m-value" id="cmp_var_rente" style="font-size:16px">—</div></div>
+              </div>
+              <div class="tip" style="margin-top:14px;border-left-color:var(--grey)">Risico — rente kan stijgen bij marktstijging. Lager startbedrag, maar onzeker op lange termijn.</div>
+            </div>
+          </div>
+          <hr class="divider">
+          <div style="text-align:center">
+            <div class="metric" style="display:inline-block;min-width:260px">
+              <div class="m-label">Maandelijks verschil (vast vs variabel)</div>
+              <div class="m-value" id="cmp_verschil" style="font-size:28px">—</div>
+              <div class="m-sub" id="cmp_verschil_sub"></div>
+            </div>
+          </div>
+          <div style="position:relative;height:260px;margin-top:24px"><canvas id="chartVergelijk"></canvas></div>
+          <div style="display:flex;gap:16px;margin-top:10px;font-family:var(--font-mono);font-size:10px;color:var(--grey)">
+            <span><span style="display:inline-block;width:8px;height:8px;background:var(--dark);margin-right:5px"></span>Vaste rente (intresten/jaar)</span>
+            <span><span style="display:inline-block;width:8px;height:8px;background:var(--gold);margin-right:5px"></span>Variabele rente (intresten/jaar)</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab_tabel" style="display:none">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+            <div class="card-title" style="margin-bottom:0"><div class="card-mark"></div>Aflossingstabel</div>
+            <div class="toggle-group">
+              <button class="toggle-btn" onclick="toggleTabel('maand')" id="btn_maand">Per maand</button>
+              <button class="toggle-btn active" onclick="toggleTabel('jaar')" id="btn_jaar">Per jaar</button>
+            </div>
+          </div>
+          <div class="table-scroll"><table><thead id="tabelHead"></thead><tbody id="tabelBody"></tbody></table></div>
+          <div style="margin-top:16px;text-align:right"><button class="btn btn-outline" onclick="window.print()">Afdrukken / PDF →</button></div>
+        </div>
+      </div>
+
+      <div id="tab_scenarios" style="display:none">
+        <div class="card">
+          <div class="card-title"><div class="card-mark"></div>Scenario-vergelijking</div>
+          <div style="position:relative;height:280px;margin-bottom:24px"><canvas id="chartScenario"></canvas></div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th>Scenario</th><th>Rente</th><th>Looptijd</th><th>Maandlast</th><th>Totaal betaald</th><th>Totale intresten</th></tr></thead>
+              <tbody id="scenarioBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab_tips" style="display:none">
+        <div class="g2" style="align-items:start">
+          <div class="card">
+            <div class="card-title"><div class="card-mark"></div>Persoonlijke tips</div>
+            <div id="tips_lijst"></div>
+          </div>
+          <div class="card">
+            <div class="card-title"><div class="card-mark"></div>Hoe werkt een annuïteitenlening?</div>
+            <p style="margin-bottom:14px;font-size:14px">Bij een <strong>annuïteitenlening</strong> — de meest gebruikte hypotheekvorm in België — betaalt u elke maand hetzelfde bedrag. In het begin bestaat dit voornamelijk uit intresten; naarmate de lening vordert, betaalt u meer kapitaal terug.</p>
+            <div class="tip">Formule: M = P × [r(1+r)ⁿ] / [(1+r)ⁿ−1]<br><span style="font-size:11px;color:var(--grey)">P = leenbedrag · r = maandelijkse rentevoet · n = totaal aantal maanden</span></div>
+            <p style="font-size:14px;margin-top:14px"><strong>Registratierechten:</strong> 2% voor uw enige eigen woning in Vlaanderen (2025), anders 12,5%.</p>
+            <p style="font-size:14px;margin-top:10px"><strong>Max. schuldgraad:</strong> 33% van uw netto-maandinkomen. Max. quotiteit: 80–90% van de woningwaarde.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:24px 0;border-top:1px solid var(--border);margin-top:16px">
+        <button class="btn btn-outline" onclick="window.print()">Exporteer als PDF →</button>
+        <p style="font-size:11px;color:var(--grey);margin-top:8px;font-family:var(--font-mono);letter-spacing:.04em">Ctrl+P → Opslaan als PDF</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section id="uitleg" class="section section-border" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="eyebrow">Eenvoudig in 3 stappen</div>
+    <h2 class="section-title">Hoe werkt de simulator?</h2>
+    <div class="g3" style="margin-top:32px">
+      <div><div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px">01 —</div><h3 style="margin-bottom:10px">Vul uw gegevens in</h3><p style="font-size:14px">Aankoopprijs, eigen vermogen, bijkomende kosten, inkomen en gewenste rentevoet via sliders of invoervelden.</p></div>
+      <div><div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px">02 —</div><h3 style="margin-bottom:10px">Ontvang direct resultaat</h3><p style="font-size:14px">Maandlast, totale interestkosten, maximaal leenbedrag en een volledige aflossingstabel — onmiddellijk.</p></div>
+      <div><div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px">03 —</div><h3 style="margin-bottom:10px">Vergelijk scenario's</h3><p style="font-size:14px">Test verschillende rentevoeten en looptijden. Exporteer uw berekening als PDF voor uw bankgesprek.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" style="padding-top:32px"><div class="ad-slot" aria-hidden="true"><div class="ad-label">Advertentie</div><p>728×90 — Google AdSense plaatshouder</p></div></div>
+
+<section id="faq" class="section section-border">
+  <div class="wrap">
+    <div class="eyebrow">Veelgestelde vragen</div>
+    <h2 class="section-title">FAQ</h2>
+    <div style="max-width:720px;margin-top:32px">
+      <div class="faq-item"><h3>Hoeveel kan ik lenen voor een woning in België?</h3><p>Banken hanteren een maximale schuldgraad van <strong>33% van uw netto-maandinkomen</strong>. Daarnaast financieren ze typisch maximaal 80–90% van de woningwaarde. Onze simulator berekent beide automatisch op basis van uw gegevens.</p></div>
+      <div class="faq-item"><h3>Wat is het verschil tussen vaste en variabele rentevoet?</h3><p>Bij een <strong>vaste rentevoet</strong> blijft uw maandlast identiek gedurende de hele looptijd. Bij een <strong>variabele rentevoet</strong> kan de rente periodiek herzien worden. Lager startbedrag, maar meer risico bij rentestijgingen.</p></div>
+      <div class="faq-item"><h3>Welke bijkomende kosten zijn er bij een woonlening?</h3><p>Notariskosten (±1–2%), registratierechten (2% of 12,5%), dossierkosten (±€500–1.500) en eventuele renovatiekosten. Reken op 10–15% bovenop de aankoopprijs.</p></div>
+      <div class="faq-item"><h3>Hoe lang mag een woonlening duren?</h3><p>De meeste banken financieren woonleningen voor <strong>10 tot 30 jaar</strong>. Hoe langer de looptijd, hoe lager de maandlast, maar hoe meer intresten u totaal betaalt.</p></div>
+      <div class="faq-item"><h3>Is deze simulator gratis?</h3><p>Ja, volledig gratis en zonder registratie. Uw gegevens worden nergens opgeslagen. U kunt onbeperkt simulaties uitvoeren.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-border" style="background:var(--bg)">
+  <div class="wrap"><div style="max-width:680px">
+    <h2 style="margin-bottom:16px">Lening simulator voor uw woonlening</h2>
+    <p style="font-size:15px;margin-bottom:12px">Een <strong>hypothecaire lening</strong> is voor de meeste Belgen de grootste financiële beslissing van hun leven. Met onze gratis lening simulator berekent u snel hoeveel u kunt lenen, wat uw maandelijkse aflossing wordt en hoeveel u totaal aan intresten betaalt.</p>
+    <p style="font-size:15px;margin-bottom:12px">De simulator houdt rekening met alle relevante factoren: eigen vermogen, aankoopprijs, bijkomende kosten, looptijd en rentevoet. U vergelijkt vaste en variabele rente naast elkaar en ontvangt een volledige aflossingstabel.</p>
+    <p style="font-size:15px">De berekening gebruikt de officiële <strong>annuïteitsformule</strong> die ook door Belgische banken wordt gehanteerd. Transparant, nauwkeurig en zonder verborgen agenda.</p>
+  </div></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand" style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0">
+          <defs><linearGradient id="nd3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0A0A0A"/><stop offset="100%" style="stop-color:#2A2A2A"/></linearGradient><linearGradient id="nl3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9a7b3a"/><stop offset="100%" style="stop-color:#c9a84c"/></linearGradient></defs>
+          <g transform="translate(150,150)">
+            <circle cx="0" cy="0" r="130" fill="none" stroke="#ffffff" stroke-width="2.2" opacity="0.4"/>
+            <circle cx="0" cy="0" r="121" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.2"/>
+            <line x1="0" y1="-121" x2="0" y2="-130" stroke="#ffffff" stroke-width="4.5" opacity="0.6"/>
+            <line x1="0" y1="121" x2="0" y2="130" stroke="#ffffff" stroke-width="2.5" opacity="0.4"/>
+            <line x1="-121" y1="0" x2="-130" y2="0" stroke="#ffffff" stroke-width="2.5" opacity="0.4"/>
+            <line x1="121" y1="0" x2="130" y2="0" stroke="#ffffff" stroke-width="2.5" opacity="0.4"/>
+            <polygon points="72,-72 7,-7 14,14 -7,7" fill="url(#nd3)"/>
+            <polygon points="-72,72 -7,7 -14,-14 7,-7" fill="url(#nl3)"/>
+            <circle cx="0" cy="0" r="11" fill="#ffffff" opacity="0.8"/>
+            <circle cx="0" cy="0" r="5" fill="#1a1a18"/>
+          </g>
+        </svg>
+        <span>LeningSimulator.be</span>
+      </div>
+        <p class="footer-desc">De meest complete en gebruiksvriendelijke lening simulator voor België. Gratis, anoniem en nauwkeurig. Onderdeel van het MijnBeursKompas-ecosysteem.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Berekeningen</h4>
+        <ul>
+          <li><a href="#simulator">Hypotheek berekenen</a></li>
+          <li><a href="#simulator">Maandlast berekenen</a></li>
+          <li><a href="#simulator">Aflossingstabel</a></li>
+          <li><a href="#simulator">Scenario's vergelijken</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#uitleg">Hoe werkt het?</a></li>
+          <li><a href="http://mijnbeurskompas.be" target="_blank">MijnBeursKompas</a></li>
+          <li><a href="#privacybeleid">Privacybeleid</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LeningSimulator.be</span>
+      <span><a href="#privacybeleid" style="color:rgba(255,255,255,.2)">Privacy</a> · <a href="#cookiebeleid" style="color:rgba(255,255,255,.2)">Cookies</a></span>
+    </div>
+    <p class="footer-disclaimer">⚠️ De berekeningen op deze website zijn louter indicatief. LeningSimulator.be verstrekt geen financieel advies. Raadpleeg altijd een erkend financieel adviseur of notaris voor definitieve beslissingen.</p>
+  </div>
+</footer>
+
+<!-- PRIVACYBELEID & COOKIEBELEID -->
+<section id="privacybeleid" style="background:var(--bg);padding:48px 0;border-top:1px solid var(--border)">
+  <div class="wrap" style="max-width:720px">
+    <div class="eyebrow">Juridisch</div>
+    <h2 class="section-title" style="margin-bottom:28px">Privacybeleid</h2>
+    <p style="font-size:14px;margin-bottom:14px">LeningSimulator.be verwerkt <strong>geen persoonlijke gegevens</strong>. Alle berekeningen gebeuren volledig lokaal in uw browser. Er worden geen gegevens opgeslagen, verstuurd of gedeeld met derden.</p>
+    <p style="font-size:14px;margin-bottom:14px">Wij gebruiken Google Analytics om anonieme bezoekersstatistieken bij te houden (aantal bezoekers, paginas bezocht). Deze gegevens zijn volledig geanonimiseerd en bevatten geen persoonlijk identificeerbare informatie.</p>
+    <p style="font-size:14px;margin-bottom:28px">Voor vragen over privacy kunt u contact opnemen via het contactformulier op <a href="http://mijnbeurskompas.be" target="_blank">mijnbeurskompas.be</a>.</p>
+    <h3 id="cookiebeleid" style="font-family:var(--font-title);font-size:20px;color:var(--dark);margin-bottom:14px;margin-top:28px">Cookiebeleid</h3>
+    <p style="font-size:14px;margin-bottom:14px">Deze website maakt gebruik van minimale cookies:</p>
+    <div class="tip"><strong>Noodzakelijke cookies</strong> — Sla uw cookievoorkeur op (lokaal, nooit gedeeld).</div>
+    <div class="tip" style="margin-top:8px"><strong>Analytische cookies (optioneel)</strong> — Google Analytics voor anonieme bezoekersstatistieken. Enkel actief na uw toestemming.</div>
+    <p style="font-size:14px;margin-top:14px">U kunt uw toestemming op elk moment intrekken door de cookies in uw browser te wissen. Wij plaatsen geen marketing- of trackingcookies.</p>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--grey);margin-top:20px;letter-spacing:.04em">Laatste update: januari 2026 — LeningSimulator.be</p>
+  </div>
+</section>
+
+<script>
+(function(){if(localStorage.getItem('ck'))document.getElementById('cookie-banner').style.display='none';})();
+function acceptCk(){localStorage.setItem('ck','all');document.getElementById('cookie-banner').style.display='none';}
+function hideCk(){localStorage.setItem('ck','min');document.getElementById('cookie-banner').style.display='none';}
+
+let charts={},tabelModus='jaar';
+const el=id=>document.getElementById(id);
+const fmt=n=>'€\u00a0'+Math.round(n).toLocaleString('nl-BE');
+const fmtPct=n=>Number(n).toLocaleString('nl-BE',{minimumFractionDigits:2,maximumFractionDigits:2})+'%';
+
+function linkSlider(sl,inp,fn){
+  const s=el(sl),i=el(inp),v=el('sv_'+sl.replace('sl_',''));
+  if(!s||!i)return;
+  const u=x=>{if(v)v.textContent=fn(x);};
+  s.addEventListener('input',()=>{i.value=parseFloat(s.value);u(s.value);});
+  i.addEventListener('input',()=>{if(parseFloat(i.value)>=parseFloat(s.min)&&parseFloat(i.value)<=parseFloat(s.max))s.value=i.value;u(i.value);});
+  u(s.value);
+}
+
+function setup(){
+  linkSlider('sl_aankoopprijs','aankoopprijs',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_eigeninbreng','eigeninbreng',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_leenbedrag','leenbedrag',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  linkSlider('sl_looptijd','looptijd',v=>v+' jaar');
+  linkSlider('sl_rente_vast','rente_vast',v=>parseFloat(v).toFixed(2).replace('.',',')+'%');
+  linkSlider('sl_rente_var','rente_var',v=>parseFloat(v).toFixed(2).replace('.',',')+'%');
+  linkSlider('sl_maxmaand','maxmaand',v=>'€\u00a0'+parseInt(v).toLocaleString('nl-BE'));
+  el('rentetype').addEventListener('change',()=>{
+    const v=el('rentetype').value,show=v!=='vast';
+    el('var_field').style.display=show?'block':'none';
+    el('var_note').style.display=show?'block':'none';
+  });
+}
+
+function ann(P,r,n){const m=n*12,mr=r/100/12;if(mr===0)return P/m;return P*mr*Math.pow(1+mr,m)/(Math.pow(1+mr,m)-1);}
+function amort(P,r,n){
+  const m=n*12,mr=r/100/12,M=ann(P,r,n);
+  let s=P,rows=[];
+  for(let i=1;i<=m;i++){const rm=s*mr,km=M-rm;s=Math.max(0,s-km);rows.push({mnd:i,jaar:Math.ceil(i/12),maandlast:M,rente:rm,kapitaal:km,saldo:s});}
+  return rows;
+}
+function aggJaar(rows){
+  const map={};
+  rows.forEach(r=>{if(!map[r.jaar])map[r.jaar]={jaar:r.jaar,maandlast:r.maandlast,rente:0,kapitaal:0,saldo:r.saldo};map[r.jaar].rente+=r.rente;map[r.jaar].kapitaal+=r.kapitaal;map[r.jaar].saldo=r.saldo;});
+  return Object.values(map);
+}
+function dc(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+
+Chart.defaults.font.family="'Outfit',system-ui,sans-serif";
+Chart.defaults.font.size=11;
+Chart.defaults.color='#7a7570';
+
+function bereken(){
+  const ap=parseFloat(el('aankoopprijs').value)||0;
+  const ei=parseFloat(el('eigeninbreng').value)||0;
+  const no=parseFloat(el('notariskosten').value)||0;
+  const re=parseFloat(el('registratie').value)||0;
+  const do_=parseFloat(el('dossierkosten').value)||0;
+  const rv=parseFloat(el('renovatie').value)||0;
+  const ink=parseFloat(el('inkomen').value)||0;
+  const mm=parseFloat(el('maxmaand').value)||0;
+  const len=parseFloat(el('leenbedrag').value)||0;
+  const lp=parseInt(el('looptijd').value)||20;
+  const rv_=parseFloat(el('rente_vast').value)||3.3;
+  const rv2=parseFloat(el('rente_var').value)||2.9;
+  const sr=parseFloat(el('scen_rente').value)||4;
+  const sj=parseInt(el('scen_jaar').value)||25;
+
+  if(ap<=0||len<=0){alert('Vul een geldige aankoopprijs en leenbedrag in.');return;}
+
+  const bk=no+re+do_+rv,tn=ap+bk;
+  const r=rv_/100/12,n=lp*12;
+  const maxL=r>0?(ink*0.33)*(Math.pow(1+r,n)-1)/(r*Math.pow(1+r,n)):(ink*0.33)*n;
+
+  const mv=ann(len,rv_,lp),mvar=ann(len,rv2,lp);
+  const tv=mv*lp*12,tvar=mvar*lp*12;
+  const trv=tv-len,trvar=tvar-len;
+
+  el('r_maxlenen').textContent=fmt(maxL);
+  el('r_leenbedrag').textContent=fmt(len);
+  el('r_maandlast').textContent=fmt(mv);
+  el('r_eigennood').textContent=fmt(Math.max(0,tn-len));
+  el('r_totaalbetaald').textContent=fmt(tv);
+  el('r_totaalrente').textContent=fmt(trv);
+  el('r_jaarlijks').textContent=fmt(mv*12);
+  el('r_kosten').textContent=fmt(bk);
+  const pk=Math.round(len/tv*100);
+  el('prog_kap').style.width=pk+'%';
+  el('pct_kap').textContent=pk+'%';
+  el('pct_rent').textContent=(100-pk)+'%';
+
+  const pi=ink>0?mv/ink*100:0;
+  let al='';
+  if(ink>0&&pi>33)al+=`<div class="alert alert-warn"><span class="alert-icon">↑</span><div><strong>Schuldgraad te hoog.</strong> Maandlast (${fmt(mv)}) is ${pi.toFixed(0)}% van uw netto-inkomen. Banken hanteren max. 33%.</div></div>`;
+  else if(ink>0)al+=`<div class="alert alert-ok"><span class="alert-icon">✓</span><div>Schuldgraad ${pi.toFixed(0)}% — binnen de norm van 33%.</div></div>`;
+  if(ei<tn*0.1)al+=`<div class="alert alert-warn"><span class="alert-icon">↑</span><div>Eigen inbreng minder dan 10%. Banken vereisen doorgaans min. 10–20%.</div></div>`;
+  if(mm>0&&mv>mm)al+=`<div class="alert alert-danger"><span class="alert-icon">!</span><div>Maandlast (${fmt(mv)}) overschrijdt uw gewenst maximum (${fmt(mm)}).</div></div>`;
+  el('alert_zone').innerHTML=al;
+
+  el('cmp_vast_pct').textContent=fmtPct(rv_);el('cmp_var_pct').textContent=fmtPct(rv2);
+  el('cmp_vast_maand').textContent=fmt(mv);el('cmp_vast_jaar').textContent=fmt(mv*12);
+  el('cmp_vast_totaal').textContent=fmt(tv);el('cmp_vast_rente').textContent=fmt(trv);
+  el('cmp_var_maand').textContent=fmt(mvar);el('cmp_var_jaar').textContent=fmt(mvar*12);
+  el('cmp_var_totaal').textContent=fmt(tvar);el('cmp_var_rente').textContent=fmt(trvar);
+  const vsch=mv-mvar;
+  el('cmp_verschil').textContent=fmt(Math.abs(vsch));
+  el('cmp_verschil_sub').textContent=vsch>0?`Vaste rente kost ${fmt(Math.abs(vsch))}/maand meer`:`Variabele rente kost ${fmt(Math.abs(vsch))}/maand meer`;
+
+  const av=amort(len,rv_,lp),avar=amort(len,rv2,lp);
+  const jv=aggJaar(av),jvar=aggJaar(avar);
+  const lj=jv.map(r=>'Jr '+r.jaar);
+  const D='#1a1a18',G='#9a7b3a',GL='#c9a84c',BR='#e2ddd6';
+
+  dc('chartKosten');
+  const kd=[len,no,re,do_,rv],kl=['Leenbedrag','Notaris','Registratie','Dossier','Renovatie'],kc=[D,G,'#7a7570','#b8a88a','#4a4a48'];
+  const kf=kl.map((l,i)=>({l,v:kd[i],c:kc[i]})).filter(x=>x.v>0);
+  charts['chartKosten']=new Chart(el('chartKosten'),{type:'doughnut',data:{labels:kf.map(x=>x.l),datasets:[{data:kf.map(x=>x.v),backgroundColor:kf.map(x=>x.c),borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
+  el('legendKosten').innerHTML=kf.map(x=>`<span style="display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;background:${x.c}"></span>${x.l}: ${fmt(x.v)}</span>`).join('');
+
+  dc('chartSaldo');
+  charts['chartSaldo']=new Chart(el('chartSaldo'),{type:'line',data:{labels:['Start',...lj],datasets:[{data:[len,...jv.map(r=>Math.round(r.saldo))],borderColor:D,backgroundColor:'rgba(26,26,24,.04)',tension:.35,fill:true,borderWidth:1.5,pointRadius:0},{data:[len,...jvar.map(r=>Math.round(r.saldo))],borderColor:G,borderDash:[4,3],tension:.35,fill:false,borderWidth:1.5,pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>'€'+Math.round(v/1000)+'k'},grid:{color:BR}},x:{grid:{color:BR}}}}});
+
+  dc('chartJaarlijks');
+  charts['chartJaarlijks']=new Chart(el('chartJaarlijks'),{type:'bar',data:{labels:lj,datasets:[{data:jv.map(r=>Math.round(r.kapitaal)),backgroundColor:D,label:'Kapitaal'},{data:jv.map(r=>Math.round(r.rente)),backgroundColor:G,label:'Intresten'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{stacked:true,grid:{display:false},ticks:{maxRotation:45}},y:{stacked:true,ticks:{callback:v=>'€'+Math.round(v/1000)+'k'},grid:{color:BR}}}}});
+
+  dc('chartVergelijk');
+  charts['chartVergelijk']=new Chart(el('chartVergelijk'),{type:'bar',data:{labels:lj,datasets:[{data:jv.map(r=>Math.round(r.rente)),backgroundColor:D,label:'Vast'},{data:jvar.map(r=>Math.round(r.rente)),backgroundColor:G,label:'Variabel'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{maxRotation:45}},y:{ticks:{callback:v=>'€'+Math.round(v/1000)+'k'},grid:{color:BR}}}}});
+
+  const scen=[
+    {l:'Uw scenario',r:rv_,j:lp,h:true},{l:'Alt. rente',r:sr,j:lp},{l:'Alt. looptijd',r:rv_,j:sj},
+    {l:'Beide alt.',r:sr,j:sj},{l:'15 jaar',r:rv_,j:15},{l:'Rente 2%',r:2,j:lp},{l:'Rente 5%',r:5,j:lp}
+  ];
+  const sr2=scen.map(s=>{const m=ann(len,s.r,s.j),t=m*s.j*12;return{...s,m,t,ri:t-len};});
+  el('scenarioBody').innerHTML=sr2.map(s=>`<tr style="${s.h?'background:var(--bg);font-weight:500':''}"><td>${s.l}</td><td>${fmtPct(s.r)}</td><td>${s.j}j</td><td>${fmt(s.m)}</td><td>${fmt(s.t)}</td><td class="td-gold">${fmt(s.ri)}</td></tr>`).join('');
+
+  dc('chartScenario');
+  const sc=['#1a1a18','#9a7b3a','#7a7570','#b8a88a','#4a4a48','#c9a84c','#5a5a58'];
+  charts['chartScenario']=new Chart(el('chartScenario'),{type:'bar',data:{labels:sr2.map(s=>s.l),datasets:[{data:sr2.map(s=>Math.round(s.m)),backgroundColor:sc}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{ticks:{callback:v=>'€'+Math.round(v)},grid:{color:BR}}}}});
+
+  renderTabel(av,jv);
+
+  const tips=[];
+  if(lp>20)tips.push(`Kortere looptijd bespaart aanzienlijk op intresten. Bij 15 jaar i.p.v. ${lp} jaar betaalt u ${fmt(trv-(ann(len,rv_,15)*15*12-len))} minder.`);
+  if(ei<ap*0.2)tips.push('Meer eigen inbreng verlaagt zowel uw maandlast als de totale interestkosten. Streef naar minstens 20%.');
+  tips.push(`Bij ${fmtPct(rv_)} betaalt u over ${lp} jaar in totaal ${fmt(trv)} aan intresten — ${Math.round(trv/len*100)}% bovenop het geleende bedrag.`);
+  tips.push('Vervroegde terugbetaling in de eerste jaren reduceert de interestlast aanzienlijk.');
+  if(ink>0&&pi<25)tips.push('Uw schuldgraad is gunstig. U heeft ruimte voor een kortere looptijd zonder de 33%-norm te overschrijden.');
+  el('tips_lijst').innerHTML=tips.map(t=>`<div class="tip">${t}</div>`).join('');
+
+  el('resultaten').style.display='block';
+  setTimeout(()=>el('resultaten').scrollIntoView({behavior:'smooth',block:'start'}),100);
+}
+
+function renderTabel(av,jv){
+  if(tabelModus==='jaar'){
+    el('tabelHead').innerHTML='<tr><th>Jaar</th><th>Maandlast</th><th>Kapitaal</th><th>Intresten</th><th>Saldo</th></tr>';
+    el('tabelBody').innerHTML=jv.map(r=>`<tr><td>Jaar ${r.jaar}</td><td>${fmt(r.maandlast)}</td><td>${fmt(r.kapitaal)}</td><td class="td-gold">${fmt(r.rente)}</td><td>${fmt(r.saldo)}</td></tr>`).join('');
+  }else{
+    el('tabelHead').innerHTML='<tr><th>Maand</th><th>Maandlast</th><th>Kapitaal</th><th>Intresten</th><th>Saldo</th></tr>';
+    el('tabelBody').innerHTML=av.map(r=>`<tr><td>M${r.mnd} <span style="opacity:.4;font-size:10px">jr${r.jaar}</span></td><td>${fmt(r.maandlast)}</td><td>${fmt(r.kapitaal)}</td><td class="td-gold">${fmt(r.rente)}</td><td>${fmt(r.saldo)}</td></tr>`).join('');
+  }
+}
+function toggleTabel(m){tabelModus=m;el('btn_maand').classList.toggle('active',m==='maand');el('btn_jaar').classList.toggle('active',m==='jaar');bereken();}
+function showTab(tab,btn){document.querySelectorAll('[id^=tab_]').forEach(t=>t.style.display='none');document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));el('tab_'+tab).style.display='';btn.classList.add('active');}
+
+setup();bereken();
+</script>
+</body>
+</html>
